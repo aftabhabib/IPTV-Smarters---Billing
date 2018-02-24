@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.activity.DashboardActivity">
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:itemTextColor="@android:color/white"
+        tools:openDrawer="left">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <include
+                layout="@layout/app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:id="@+id/rl_account_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tabslidecolor">
+                <ImageView
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/backspress"
+                    android:id="@+id/iv_back_press"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+                <TextView
+                    android:id="@+id/tv_account_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@string/font_family_bold"
+                    android:text="@string/account_info"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_account_info"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_username_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/account_username"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_status_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_username_label"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/account_status"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_expiry_date_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_status_label"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/account_expiry_date"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_is_trial_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_expiry_date_label"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/account_is_trial"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_active_conn_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_is_trial_label"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/account_active_connections"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_created_at_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_active_conn_label"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/account_created_at"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_max_connections_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_created_at_label"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="20dp"
+                                android:text="@string/account_max_connections"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_username"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:background="#0cdc78"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tv_expiry_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_status"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tv_is_trial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_expiry_date"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tv_active_conn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_is_trial"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tv_created_at"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_active_conn"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tv_max_connections"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_created_at"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:textSize="15dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <include
+                layout="@layout/app_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+            app:headerLayout="@layout/nav_header"
+            app:itemIconTint="@color/white">
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation_drawer_bottom"
+                android:visibility="gone"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_black"
+                android:fitsSystemWindows="true"
+                app:headerLayout="@layout/nav_footer" />
+
+            <ExpandableListView
+                android:id="@+id/navigationmenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="200.3dp"
+                android:background="@color/light_black"
+                app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null"
+                android:paddingTop="5dp" />
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
+
+
+

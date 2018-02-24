@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.ActiveServicesFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+         >
+        <ProgressBar
+            android:id="@+id/pb_loader"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/tabslidecolor"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/rl_my_support_ticket"
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:background="#f4f4f6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="30dp"
+        android:text="@string/no_record_found"
+        android:visibility="gone"
+        android:fontFamily="@string/font_family_thin"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="60dp" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_support"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+     >
+    <!--android:foreground="?android:attr/selectableItemBackground"-->
+    <!--android:background="@drawable/ripple_my_support_tickets"-->
+    <RelativeLayout
+        android:background="@drawable/selector_services_layout"
+        android:focusable="true"
+
+
+        android:clickable="true"
+
+        android:id="@+id/rl_my_support_ticket"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_image_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ticket_list_icon" />
+
+        <RelativeLayout
+            android:id="@+id/rl_support_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_image_icon"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/tv_department_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_family_medium"
+                android:text="@string/support_hash"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_department_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_family_medium"
+                android:text="@string/status"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+            <TextView
+                android:id="@+id/tv_status_value"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/tv_department_name"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/tv_status"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_family_regular"
+                android:text="Customer-Reply"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_margin"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_department_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_status_value"
+                android:fontFamily="@string/font_family_medium"
+                android:text="|"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_last_updated"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_department_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_margin"
+                android:fontFamily="@string/font_family_medium"
+                android:text="@string/last_updated"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+            <TextView
+                android:id="@+id/tv_last_updated_value"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/tv_department_name"
+                android:layout_toRightOf="@+id/tv_last_updated"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_family_regular"
+                android:text="25/05/2017 13:09"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/rl_support_status"
+            android:id="@+id/iv_support_ticket_forward_arrrow"
+            android:layout_width="8dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/announcement_arrow_right" />
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/rl_support_status"
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+    <!--android:background="#fbfaff"-->

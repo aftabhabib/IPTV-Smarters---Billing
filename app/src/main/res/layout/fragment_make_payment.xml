@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.MakePaymentFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:text="Please choose your Payment Method"
+            android:id="@+id/tv_payment_methhod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner
+
+            android:layout_below="@+id/tv_payment_methhod"
+            android:layout_marginTop="25dp"
+
+            android:id="@+id/sp_payment_method"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:spinnerMode="dropdown"
+            android:layout_marginLeft="20dp"
+            android:overlapAnchor="false"
+            android:popupBackground="@color/add_funds_edit_text_bg"
+            android:layout_marginBottom="8dp"
+            android:background="@color/add_funds_edit_text_bg"
+            android:layout_height="40dp"/>
+        <ImageView
+            android:layout_below="@+id/tv_payment_methhod"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/iv_spinner_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/down_arrow" />
+        <Button
+
+            android:layout_below="@+id/sp_payment_method"
+            android:id="@+id/bt_pay_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#167095"
+            android:text="Pay now"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</FrameLayout>

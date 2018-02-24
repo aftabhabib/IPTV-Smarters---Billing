@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_view_request"
+        android:layout_gravity="bottom"
+        android:background="#fafaff">
+
+        <RelativeLayout
+            android:id="@+id/rl_reply_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fafaff"
+            android:padding="0dp">
+
+            <Button
+                android:id="@+id/bt_reply_toggle"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_alignParentRight="true"
+                android:background="#fafaff"
+                android:onClick="expandableButton1"
+                android:paddingLeft="25dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_domains"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fbfaff">
+
+                <ImageView
+                    android:id="@+id/iv_image_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/domain_list_icon" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_domains_list_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_image_icon"
+                    android:paddingLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_domains_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:fontFamily="@string/font_family_medium"
+                        android:text="Demo Product"
+                        android:textColor="@color/view_ticket_request"
+                        android:textSize="16dp" />
+                    <ImageView
+                        android:id="@+id/iv_arrow_downward"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/down_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableLinearLayout
+            android:id="@+id/expandableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_reply_ticket"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:ael_duration="200"
+            app:ael_expanded="false"
+            app:ael_interpolator="linear">
+
+            <LinearLayout
+                android:id="@+id/ll_expandable"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_registration_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:textColor="@color/view_ticket_request"
+                            android:text="Reg Date">
+                        </TextView>
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/tv_registration_date_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12/05/2017"
+                            android:textSize="10dp"
+                            android:fontFamily="@string/font_family_regular"
+                            android:textColor="@color/view_ticket_request">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_next_due_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:textColor="@color/view_ticket_request"
+                            android:text="Next Due Date">
+                        </TextView>
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/tv_next_due_date_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12/05/2017"
+                            android:textSize="10dp"
+                            android:fontFamily="@string/font_family_regular"
+                            android:textColor="@color/view_ticket_request">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_auto_renewal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:textColor="@color/view_ticket_request"
+                            android:text="Auto Renewal">
+                        </TextView>
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/tv_auto_renewal_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enable"
+                            android:textSize="10dp"
+                            android:fontFamily="@string/font_family_regular"
+                            android:textColor="@color/view_ticket_request">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_manage_domain"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <Button
+                            android:text="MANAGE"
+                            android:textSize="14dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@string/font_family_medium"
+                            android:background="@color/blue"
+                            android:id="@+id/tv_manage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+
+
+        <ImageView
+            android:layout_below="@+id/expandableLayout1"
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/divider" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+<!--<RelativeLayout-->
+<!--android:id="@+id/rl_manage_domains"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="40dp"-->
+<!--android:background="@color/blue"-->
+<!--android:gravity="center">-->
+
+<!--<TextView-->
+    <!--android:id="@+id/tv_manage"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:fontFamily="@string/font_family_medium"-->
+    <!--android:text="MANAGE"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="16dp" />-->
+
+<!--<ImageView-->
+    <!--android:layout_width="12dp"-->
+    <!--android:layout_height="12dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_toRightOf="@+id/tv_manage"-->
+    <!--android:src="@drawable/forward_arrow" />-->
+
+<!--</RelativeLayout>-->
+
+<!--<ImageView-->
+<!--android:id="@+id/iv_line"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="1.5dp"-->
+<!--android:layout_below="@+id/expandableLayout1"-->
+<!--android:background="@drawable/invoices_item_under_line" />-->
+
+
+
+
+
+<!--<RelativeLayout-->
+<!--android:id="@+id/rl_domains"-->
+<!--android:background="#fbfaff"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--layout_width="wrap_content"-->
+<!--layout_height="wrap_content">-->
+
+<!--<ImageView-->
+    <!--android:id="@+id/iv_image_icon"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:src="@drawable/domains_list_icon"-->
+    <!--layout_width="wrap_content"-->
+    <!--layout_height="wrap_content" />-->
+
+<!--<RelativeLayout-->
+    <!--android:id="@+id/rl_domains_list_item"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_toRightOf="@+id/iv_image_icon"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--layout_width="wrap_content"-->
+    <!--layout_height="wrap_content">-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_domains_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@string/font_family_medium"-->
+        <!--android:text="Demo Product"-->
+        <!--android:textColor="@color/view_ticket_request"-->
+        <!--android:textSize="14dp"-->
+        <!--layout_width="wrap_content"-->
+        <!--layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_registration_date"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_below="@+id/tv_domains_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@string/font_family_medium"-->
+        <!--android:text="Reg Date:"-->
+        <!--android:textColor="@color/view_ticket_request"-->
+        <!--android:textSize="10dp"-->
+        <!--layout_width="wrap_content"-->
+        <!--layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_registration_date_value"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_below="@+id/tv_domains_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_toRightOf="@+id/tv_registration_date"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@string/font_family_regular"-->
+        <!--android:text="05/18/2017"-->
+        <!--android:textColor="@color/view_ticket_request"-->
+        <!--android:textSize="10dp"-->
+        <!--layout_width="wrap_content"-->
+        <!--layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:id="@+id/tv_margin"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_below="@+id/tv_domains_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@+id/tv_registration_date_value"-->
+        <!--android:fontFamily="@string/font_family_medium"-->
+        <!--android:text="|"-->
+        <!--android:textColor="@color/view_ticket_request"-->
+        <!--android:textSize="10dp"-->
+        <!--layout_width="wrap_content"-->
+        <!--layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:id="@+id/tv_next_due_date"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_below="@+id/tv_domains_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@+id/tv_margin"-->
+        <!--android:fontFamily="@string/font_family_medium"-->
+        <!--android:text="Next Due Date:"-->
+        <!--android:textColor="@color/view_ticket_request"-->
+        <!--android:textSize="10dp"-->
+        <!--layout_width="wrap_content"-->
+        <!--layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_next_due_date_value"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_below="@+id/tv_domains_name"-->
+        <!--android:layout_toRightOf="@+id/tv_next_due_date"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@string/font_family_regular"-->
+        <!--android:text="25/05/2017 13:09"-->
+        <!--android:textColor="@color/view_ticket_request"-->
+        <!--android:textSize="10dp"-->
+        <!--layout_width="wrap_content"-->
+        <!--layout_height="wrap_content" />-->
+
+<!--</RelativeLayout>-->
+
+<!--<ImageView-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:id="@+id/iv_domains_item_forward_arrow"-->
+    <!--android:layout_width="8dp"-->
+    <!--android:layout_height="10dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:background="@drawable/announcement_arrow_right"-->
+    <!--layout_width="wrap_content"-->
+    <!--layout_height="wrap_content" />-->
+
+<!--<ImageView-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:layout_below="@+id/rl_domains_list_item"-->
+    <!--android:id="@+id/iv_line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="3dp"-->
+    <!--android:background="@drawable/line_light_gray_small"-->
+    <!--layout_width="wrap_content"-->
+    <!--layout_height="wrap_content" />-->
+<!--</RelativeLayout>-->

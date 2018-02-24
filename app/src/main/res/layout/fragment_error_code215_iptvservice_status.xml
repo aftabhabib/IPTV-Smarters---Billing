@@ -1,0 +1,179 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.NoSubscriptionFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f6">
+
+        <RelativeLayout
+            android:id="@+id/rl_open_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tabslidecolor">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small" />
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/backspress"
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_open_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/authorization"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:textSize="16dp" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/v_open_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/tv_open_ticket"
+                android:background="@drawable/line_light_gray_small" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_manage_domain_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_open_ticket"
+            android:layout_margin="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_open_ticket_dept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_alert_message_manage_products"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_reasons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:text="@string/tv_reasons"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_reasons"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="•"></TextView>
+                <TextView
+                    android:layout_below="@+id/tv_reasons"
+                    android:id="@+id/tv_open_ticket_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_open_ticket_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="•"></TextView>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_open_ticket_brief"
+                    android:id="@+id/tv_open_ticket_brief2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/no_subscription_messag2"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_open_ticket_brief2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="•"></TextView>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_open_ticket_brief2"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/tv_open_ticket_brief3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/no_subscription_messag3"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_open_ticket_brief3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/tv_pay_your_invoice"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_manage_domain_header2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_manage_domain_header"
+            android:layout_margin="20dp">
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</FrameLayout>

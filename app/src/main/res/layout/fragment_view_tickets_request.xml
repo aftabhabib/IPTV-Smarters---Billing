@@ -1,0 +1,252 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fl_view_ticket"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.ViewTicketsRequestFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/rl_view_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:background="@color/tabslidecolor"
+                android:id="@+id/rl_view_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small" />
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/backspress"
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_my_support_tickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/view_request"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <Button
+                android:background="@android:color/holo_red_light"
+                android:id="@+id/bt_close_ticket"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:textSize="12dp"
+                android:text="@string/close_ticket_status"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="22dp"/>
+            <View
+                android:visibility="gone"
+                android:id="@+id/view_line_my_support_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_my_support_tickets"
+                android:background="@drawable/line_light_gray_small" />
+                </RelativeLayout>>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/rl_view_request"
+            android:id="@+id/loadingPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+            <ProgressBar
+                android:indeterminateTint="@color/tabslidecolor"
+                android:id="@+id/pb_loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true" />
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_view_request"
+            android:layout_marginBottom="50dp"
+            android:background="#ffffff"
+            android:scrollbars="vertical" />
+        <TextView
+            android:id="@+id/tv_no_record_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_my_support_ticket"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@string/font_family_thin"
+            android:text="No Record Found"
+            android:textSize="30dp"
+            android:visibility="gone"
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_below="@+id/rl_view_request">
+
+        <RelativeLayout
+            android:id="@+id/rl_reply_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+            <Button
+
+                android:id="@+id/bt_reply_toggle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tabslidecolor"
+                android:drawableRight="@drawable/reply_off"
+                android:onClick="expandableButton1"
+                android:paddingLeft="25dp"
+                android:paddingRight="10dp"
+                android:text="@string/reply"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableLinearLayout
+            android:id="@+id/expandableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_reply_ticket"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:ael_duration="200"
+            app:ael_expanded="false"
+            app:ael_interpolator="linear">
+
+            <RelativeLayout
+                android:id="@+id/ll_expandable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="#e0e8ea"
+                    android:fontFamily="@string/font_family_regular"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:text="Reseller"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_email_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_name_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="#e0e8ea"
+                    android:fontFamily="@string/font_family_regular"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:text="user@whmcssmarters.com"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/et_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tv_email_address"
+                    android:background="#e0e8ea"
+                    android:fontFamily="@string/font_family_regular"
+                    android:gravity="start"
+                    android:hint="@string/message_hint"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_message"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt_submit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:background="@color/tabslidecolor"
+
+                        android:text="@string/send"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                    <!--android:background="@drawable/ripple_send_reply_ticket"-->
+
+                    <Button
+                        android:background="@color/tabslidecolor"
+                        android:id="@+id/bt_cancel_reply"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+
+                        android:text="@string/cancel"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                    <!--android:background="@drawable/ripple_send_reply_ticket"-->
+                </LinearLayout>
+            </RelativeLayout>
+        </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

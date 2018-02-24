@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item-->
+        <!--android:id="@+id/menu_reload"-->
+        <!--android:title="@string/reoad_data_cat_epg" />-->
+
+    <item
+        android:id="@+id/menu_load_channels_vod"
+        android:title="@string/load_channels_vod" />
+    <item
+        android:id="@+id/menu_load_tv_guide"
+        android:title="@string/load_tv_guide" />
+</menu>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_category1"
+    android:focusable="true"
+    android:background="@drawable/selector_checkbox">
+    <RelativeLayout
+        android:id="@+id/rl_category"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/selector_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/black"
+            android:fontFamily="@string/font_family_regular"
+            android:textSize="15dp"
+            android:layout_marginLeft="20dp"
+            android:text="INDIA"
+            android:id="@+id/tv_category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/lock_open"
+            android:id="@+id/iv_lock_staus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>>
+    <ImageView
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/rl_category"
+        android:id="@+id/iv_divider"
+        android:background="@color/service_status_terminated"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+</RelativeLayout>
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_category"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--<TextView-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:fontFamily="@string/font_family_regular"-->
+        <!--android:textSize="15dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:text="INDIA"-->
+        <!--android:id="@+id/tv_category_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
+    <!--<ImageView-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:src="@drawable/lock"-->
+        <!--android:id="@+id/iv_lock_staus"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"/>-->
+        <!--</RelativeLayout>>-->
+    <!--<ImageView-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_below="@+id/rl_category"-->
+        <!--android:id="@+id/iv_divider"-->
+        <!--android:background="@color/service_status_terminated"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"/>-->
+<!--</RelativeLayout>-->

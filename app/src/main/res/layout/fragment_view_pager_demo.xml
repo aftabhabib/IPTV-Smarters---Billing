@@ -1,0 +1,93 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fl_products_from_group"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.ServicesOrderProductsFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_group_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/line_light_gray_small" />
+
+        <TextView
+            android:id="@+id/tv_group_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@string/font_family_regular"
+            android:text="@string/group_products"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/view_line_group_products"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/tv_group_products"
+            android:background="@drawable/line_light_gray_small" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/rl_group_products"
+        android:id="@+id/pager_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:fitsSystemWindows="true"
+        tools:listitem="@layout/layout_product_from_gorups_list_item"
+         />
+
+    <RelativeLayout
+        android:id="@+id/viewPagerIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/viewPagerCountDots"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
+
+
+
+<!--<ImageButton-->
+<!--android:id="@+id/btn_next"-->
+<!--android:layout_width="42dip"-->
+<!--android:layout_height="42dip"-->
+<!--android:layout_alignParentRight="true"-->
+<!--android:layout_marginRight="15dip"-->
+<!--android:background="@color/blue"-->
+<!--android:src="@drawable/forward_arrow" />-->
+
+<!--<ImageButton-->
+<!--android:id="@+id/btn_finish"-->
+<!--android:layout_width="42dip"-->
+<!--android:layout_height="42dip"-->
+<!--android:layout_marginRight="15dip"-->
+<!--android:contentDescription="Let's start"-->
+<!--android:src="@drawable/announcement_arrow_left"-->
+<!--android:visibility="gone" />-->

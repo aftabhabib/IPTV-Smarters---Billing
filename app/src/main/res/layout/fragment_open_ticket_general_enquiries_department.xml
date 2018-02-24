@@ -1,0 +1,463 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_open_ticket"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.OpenTicketGeneralEnquiriesDepartmentFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f6">
+
+        <RelativeLayout
+            android:id="@+id/rl_open_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tabslidecolor">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small" />
+
+            <ImageView
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                android:focusable="true"
+                android:src="@drawable/backspress" />
+            <TextView
+                android:id="@+id/tv_open_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/open_ticket"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+            <View
+                android:visibility="gone"
+                android:id="@+id/v_open_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_open_ticket"
+                android:background="@drawable/line_light_gray_small" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="50dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_manage_domain_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_open_ticket"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_open_support_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/fill_enquiry" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_info"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/tv_name_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/open_ticket_text_view_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_mail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_name_value"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Email Address"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/tv_mail_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_mail"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/open_ticket_text_view_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_subject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_mail_value"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-regular"
+                        android:text="@string/subject"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_below="@+id/tv_subject"
+                        android:id="@+id/rl_subject_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/open_ticket_text_view_bg">
+
+                        <!--android:focusable="true"-->
+                        <!--android:background="@drawable/selector_services_layout"-->
+                        <EditText
+                            android:paddingLeft="10dp"
+                            android:id="@+id/tv_subject_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:nextFocusLeft="@+id/sp_department_value"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_departement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_subject_edit"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-regular"
+                        android:text="@string/dept"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_sppinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_departement"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/open_ticket_text_view_bg">
+
+
+                        <!--android:focusable="true"-->
+                        <!--android:background="@drawable/selector_services_layout"-->
+                        <Spinner
+                            android:id="@+id/sp_department_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:nextFocusLeft="@+id/sp_priority"
+                            android:overlapAnchor="false"
+                            android:popupBackground="@color/add_funds_edit_text_bg"
+                            android:text="This is simple subject"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+                    >
+
+                    <ImageView
+
+
+                        android:id="@+id/iv_spinner_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_departement"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/down_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_related_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_sppinner"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Related Services"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:visibility="gone" />
+
+                    <Spinner
+                        android:id="@+id/sp_related_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_related_services"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/open_ticket_text_view_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:paddingLeft="10dp"
+                        android:text="Related value"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <TextView
+
+                        android:id="@+id/tv_priority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sp_related_value"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-regular"
+                        android:text="@string/priority"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_priority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_priority"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/open_ticket_text_view_bg">
+
+
+                        <!--android:focusable="true"-->
+                        <!--android:background="@drawable/selector_services_layout"-->
+                        <Spinner
+                            android:id="@+id/sp_priority"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@android:color/transparent"
+                            android:nextFocusLeft="@+id/et_message"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_vertical"
+                            android:overlapAnchor="false"
+                            android:paddingLeft="10dp"
+                            android:popupBackground="@color/add_funds_edit_text_bg"
+                            android:text="Priority value"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_priority_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_priority"
+                        android:layout_marginLeft="310dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/down_arrow" />
+
+                    <TextView
+                        android:id="@+id/tv_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_priority"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="sans-serif-regular"
+                        android:text="@string/message"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_edit_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_message"
+                        android:background="@color/open_ticket_text_view_bg"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <!--android:focusable="true"-->
+                        <!--android:background="@drawable/selector_services_layout"-->
+                        <EditText
+                            android:id="@+id/et_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@android:color/transparent"
+                            android:nextFocusLeft="@+id/bt_submit"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="start"
+                            android:hint="@string/message_hint"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/loadingPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        >
+                        <ProgressBar
+                            android:visibility="gone"
+                            android:id="@+id/pb_loader"
+                            android:layout_marginTop="25dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:indeterminate="true"
+                            android:indeterminateTint="@color/tabslidecolor"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rl_edit_message">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/ll_submit"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:layout_below="@+id/rl_edit_message"
+                                    android:id="@+id/rl_submit"
+                                    android:layout_marginBottom="25dp"
+                                    android:background="@color/openticket_bt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                <Button
+                                    android:id="@+id/bt_submit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:background="@drawable/selector_services_layout"
+                                    android:focusable="true"
+                                    android:nextFocusLeft="@+id/bt_cancel"
+
+                                    android:text="@string/submit_ticket"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+                                </RelativeLayout>>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_close"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:layout_below="@+id/rl_edit_message"
+                                    android:layout_marginBottom="25dp"
+                                    android:background="@color/openticket_bt"
+                                    android:id="@+id/rl_cancel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                <Button
+                                    android:id="@+id/bt_cancel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:background="@drawable/selector_services_layout"
+                                    android:focusable="true"
+                                    android:text="@string/close_ticket"
+                                    android:textColor="@color/white"
+                                    android:textSize="15dp" />
+                                </RelativeLayout>>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

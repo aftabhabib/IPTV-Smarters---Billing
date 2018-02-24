@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!-- EPG dimensions-->
+    <dimen name="epg_channel_layout_margin">5dp</dimen>
+    <dimen name="epg_channel_layout_padding">5dp</dimen>
+    <dimen name="epg_channel_layout_height">40dp</dimen>
+    <dimen name="epg_channel_layout_width">170dp</dimen>
+    <dimen name="epg_event_layout_text">12dp</dimen>
+    <dimen name="epg_time_bar_height">30dp</dimen>
+    <dimen name="epg_time_bar_text">10dp</dimen>
+    <dimen name="epg_time_bar_line_width">2dp</dimen>
+    <dimen name="epg_reset_button_size">40dp</dimen>
+    <dimen name="epg_reset_button_margin">10dp</dimen>
+
+    <dimen name="epg_channel_layout_height_new">170dp</dimen>
+    <dimen name="epg_channel_layout_margin_left">45dp</dimen>
+    <dimen name="epg_channel_maximum_length">125dp</dimen>
+    <dimen name="dashboard_total_text">13dp</dimen>
+    <dimen name="livetv_channels_name_text">12dp</dimen>
+    <dimen name="livetv_channels_epg_text">10dp</dimen>
+    <dimen name="livetv_channels_epg_time">10dp</dimen>
+    <dimen name="livetv_rl_streams_layout_height">170dp</dimen>
+
+
+    <dimen name="livetv_rl_channel_bottom_height">80dp</dimen>
+
+
+    <dimen name="nst_player_app_video_title_text">14dp</dimen>
+    <dimen name="nst_player_et_search_text">15dp</dimen>
+    <dimen name="nst_player_list_view_text">12dp</dimen>
+    <dimen name="nst_player_tv_logo_height">30dp</dimen>
+    <dimen name="nst_player_epg_text">13dp</dimen>
+    <dimen name="nst_player_epg_time">13dp</dimen>
+
+</resources>

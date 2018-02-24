@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/selector_checkbox"
+    android:focusable="true"
+    android:id="@+id/ll_main_layout"
+    android:tag="cards main container">
+
+    <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/card_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!--android:foreground="@drawable/selector_live_streams_layout"-->
+        <!--card_view:cardElevation="2dp"-->
+        <!--card_view:cardUseCompatPadding="true">-->
+
+
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:id="@+id/rl_archive_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/tv_channel_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:text="This is program name"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_archive_clock"
+            android:layout_marginLeft="18dp"
+            android:layout_below="@+id/tv_channel_name"
+            android:src="@drawable/tv_arch"
+            android:layout_width="17dp"
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_alignLeft="@+id/iv_archive_clock"
+            android:layout_below="@+id/tv_channel_name"
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="2dp"
+            android:textSize="17dp"
+            android:text="20:10 - 30:30"
+             />
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_now_playing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="10dp"
+            android:textColor="#08b461"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dp"
+            android:background="#792d2a2a"/>
+    </RelativeLayout>
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+</LinearLayout>

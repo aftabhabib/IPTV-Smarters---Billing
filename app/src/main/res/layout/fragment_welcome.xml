@@ -1,0 +1,118 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.LoginWelcomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_my_invoices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout_invoices"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/view_line_my_invoices"
+                android:animateLayoutChanges="true"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                android:visibility="gone"
+                app:tabMode="fixed" />
+
+            <View
+                android:id="@+id/line_below_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/tab_layout_invoices"
+                android:background="@drawable/line_services"
+                android:visibility="gone" />
+
+            <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line_below_tabs"
+                android:background="#f4f4f6"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ll_dots"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/ll_billing"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center"
+                android:background="@drawable/shape_login_iptv"
+                android:id="@+id/tv_mybilling"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="@string/whmcs_billing"
+                android:layout_width="130dp"
+                android:layout_height="50dp"/>
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/announcement_arrow_right"
+                android:id="@+id/iv_forward_arrow_"
+                android:layout_width="15dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/ll_iptv"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/announcement_arrow_left"
+                android:id="@+id/iv_back_arrow"
+                android:layout_width="15dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:gravity="center"
+                android:background="@drawable/shape_login_whmcs"
+                android:id="@+id/tv_iptv"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/whmcs_iptv"
+                android:layout_width="130dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

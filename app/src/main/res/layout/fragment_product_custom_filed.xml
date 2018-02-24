@@ -1,0 +1,106 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_product_custom_field"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.ProductCustomFiledFragment">
+
+    <RelativeLayout
+        android:background="#f4f4f6"
+        android:id="@+id/rl_product_custom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#ffffff"
+            android:id="@+id/rl_header"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/iv_header"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c2c2" />
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/backspress"
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_header"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif"
+                android:text="Demo Product"
+                android:textColor="#545454"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_below="@+id/rl_header"
+            android:id="@+id/iv_header_below"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c2c2c2" />
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_iptv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_header_below"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="70dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:background="@color/custom_bt"
+                    android:gravity="center"
+                    android:id="@+id/tv_available_custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    android:text="Additional Required Information"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/my_recycler_view_custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_available_custom"
+                    android:scrollbars="vertical"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/custom_bt"
+            android:gravity="center"
+            android:text="NEXT"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+</FrameLayout>

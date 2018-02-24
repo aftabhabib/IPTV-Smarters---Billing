@@ -1,0 +1,235 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_manage_domains_nameservers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.DomiansManageNameserverFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f6">
+
+        <RelativeLayout
+            android:id="@+id/rl_manage_domains_nameserver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small" />
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/backspress"
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>/>
+
+            <TextView
+                android:id="@+id/tv_manage_domains"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/manage_servers"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <View
+                android:id="@+id/v_domains_manage"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_manage_domains"
+                android:background="@drawable/line_light_gray_small" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_manage_domains_nameserver"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_manage_domains_nameserver">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_manage_domain_nameserver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_manage_domains"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:id="@+id/tv_manage_nameserver_breif1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="You can change where your domain points to here."
+                            android:textColor="@color/manage_name_server_text"
+                            android:textSize="13dp" />
+                        <TextView
+                            android:id="@+id/tv_manage_nameserver_breif2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_manage_nameserver_breif1"
+                            android:layout_marginTop="5dp"
+                            android:text="Please be aware changes can take up to 24 hours to propagate."
+                            android:textColor="@color/manage_name_server_text"
+                            android:textSize="13dp" />
+                        <CheckBox
+                            android:id="@+id/cb_deafult_nameserver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_manage_nameserver_breif2"
+                            android:layout_marginTop="3dp"
+                            android:text="Use default nameservers"
+                            android:textColor="@color/manage_name_server_text" />
+                        <CheckBox
+                            android:id="@+id/cb_custom_nameserver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cb_deafult_nameserver"
+                            android:checked="true"
+                            android:text="Use custom nameservers (enter below)"
+                            android:textColor="@color/manage_name_server_text" />
+                        <TextView
+                            android:id="@+id/tv_ns1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cb_custom_nameserver"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="Nameserver 1:"
+                            android:textColor="@color/manage_name_server_text"
+                            android:textSize="14dp" />
+                        <EditText
+                            android:paddingLeft="10dp"
+                            android:id="@+id/et_ns1"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/tv_ns1"
+                            android:layout_marginTop="5dp"
+                            android:background="#e0e8ea"
+                            android:textColor="@color/manage_name_server_text" />
+                        <TextView
+                            android:id="@+id/tv_ns2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/et_ns1"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="Nameserver 2:"
+                            android:textColor="@color/manage_name_server_text"
+                            android:textSize="14dp" />
+                        <EditText
+                            android:paddingLeft="10dp"
+                            android:id="@+id/et_ns2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/tv_ns2"
+                            android:layout_marginTop="5dp"
+                            android:background="#e0e8ea"
+                            android:textColor="@color/manage_name_server_text" />
+                        <TextView
+                            android:id="@+id/tv_ns3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/et_ns2"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="Nameserver 3:"
+                            android:textColor="@color/manage_name_server_text"
+                            android:textSize="14dp" />
+                        <EditText
+                            android:paddingLeft="10dp"
+                            android:id="@+id/et_ns3"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/tv_ns3"
+                            android:layout_marginTop="5dp"
+                            android:background="#e0e8ea"
+                            android:textColor="@color/manage_name_server_text" />
+                        <TextView
+                            android:id="@+id/tv_ns4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/et_ns3"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="Nameserver 4:"
+                            android:textColor="@color/manage_name_server_text"
+                            android:textSize="14dp" />
+                        <EditText
+                            android:paddingLeft="10dp"
+                            android:id="@+id/et_ns4"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/tv_ns4"
+                            android:layout_marginTop="5dp"
+                            android:background="#e0e8ea"
+                            android:textColor="@color/manage_name_server_text" />
+                        <TextView
+                            android:id="@+id/tv_ns5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/et_ns4"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@string/font_family_medium"
+                            android:text="Nameserver 5:"
+                            android:textColor="@color/manage_name_server_text"
+                            android:textSize="14dp" />
+                        <EditText
+                            android:paddingLeft="10dp"
+                            android:id="@+id/et_ns5"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@+id/tv_ns5"
+                            android:layout_marginTop="5dp"
+                            android:background="#e0e8ea"
+                            android:textColor="@color/manage_name_server_text" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <Button
+                    android:id="@+id/bt_manage_name_server"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_manage_domain_nameserver"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/manage_domain_bt"
+                    android:text="CHANGE NAMESERVERS"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

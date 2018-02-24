@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@drawable/selector_services_layout"
+        android:id="@+id/rl_service"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <!--android:background="#fbfaff"-->
+
+        <ImageView
+            android:id="@+id/iv_image_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:src="@drawable/services_list_icon" />
+
+        <RelativeLayout
+            android:id="@+id/rl_services_list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_image_icon"
+            android:paddingLeft="20dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_demo_domain">
+                <TextView
+                    android:id="@+id/tv_service_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_family_medium"
+                    android:text="Demo Product"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_marginRight="12dp"
+                    android:id="@+id/tv_domain_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_service_name"
+                    android:fontFamily="@string/font_family_regular"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="10dp"
+                    />
+            </RelativeLayout>>
+
+            <TextView
+
+                android:id="@+id/tv_pricing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_demo_domain"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@string/font_family_medium"
+                android:text="@string/pricing"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/tv_pricing_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_demo_domain"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_pricing"
+                android:fontFamily="@string/font_family_regular"
+                android:text="Customer-Reply"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/tv_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_demo_domain"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_pricing_value"
+                android:fontFamily="@string/font_family_medium"
+                android:text="|"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/tv_next_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_demo_domain"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_margin"
+                android:fontFamily="@string/font_family_medium"
+                android:text="@string/next_due_date"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/tv_next_due_date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_demo_domain"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/tv_next_due_date"
+                android:fontFamily="@string/font_family_regular"
+                android:text="25/05/2017 13:09"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_services_list_item_forward_arrow"
+            android:layout_width="12dp"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rl_support_status"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/arrow_f"
+            android:foreground="@drawable/selector_menu"
+            android:focusable="true"
+            android:nextFocusLeft="@+id/rl_service"/>
+
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/rl_services_list_item"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/divider" />
+    </RelativeLayout>
+</RelativeLayout>

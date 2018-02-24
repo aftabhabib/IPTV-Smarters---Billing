@@ -1,0 +1,709 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_manage_product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.SubscriptionProductFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f6">
+
+        <RelativeLayout
+            android:id="@+id/rl_manage_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <RelativeLayout
+                android:background="@color/tabslidecolor"
+                android:id="@+id/rl_manage_products_inner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small" />
+
+            <ImageView
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/backspress" />/>
+
+            <TextView
+                android:id="@+id/tv_manage_products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/manage_products"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/view_line_my_services_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_manage_products"
+                android:background="@drawable/line_light_gray_small" />
+                </RelativeLayout>>
+        </RelativeLayout>
+
+        <ScrollView
+
+            android:id="@+id/sv_manage_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_manage_products"
+            android:layout_marginBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_product_subscription"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/tv_alert_message_manage_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/alert_message_manage_product_shape"
+                    android:fontFamily="@string/font_family_regular"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/manage_product_alert_message"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.CardView
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/cv_product_detail"
+                    android:foreground="@drawable/selector_services_layout"
+                    android:id="@+id/cv_iptv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_alert_message_manage_products"
+                    android:layout_margin="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_iptv_subscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_alert_message_manage_products"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/iv_subscription_product"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:src="@drawable/subscription_services_product_image" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@+id/iv_subscription_product">
+
+                            <TextView
+                                android:id="@+id/tv_iptv_services_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:text="@string/deluxe"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+
+                            <View
+                                android:id="@+id/view_line_iptv_manage_product"
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:layout_below="@+id/tv_iptv_services_name"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/line_light_gray_small" />
+
+                            <TextView
+                                android:id="@+id/tv_iptv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/view_line_iptv_manage_product"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:text="@string/iptv_subscription"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+                            <TextView
+                                android:id="@+id/iv_iptv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_iptv_name"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:fontFamily="@string/font_family_regular"
+                                android:textColor="@color/white"
+                                android:textSize="12dp" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_product_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_iptv"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/product_detail"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <android.support.v7.widget.CardView
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/bt_resuest_canellation"
+                    android:foreground="@drawable/selector_services_layout"
+
+                    android:id="@+id/cv_product_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_product_detail"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_product_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_product_detail"
+                        android:background="@color/white">
+                        <RelativeLayout
+                            android:id="@+id/rl_Product_name_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_product"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/product_name"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:paddingLeft="25dp"
+                                android:id="@+id/tv_product_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/tv_product"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="end"
+                                android:text="Gold Package"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_status_info"
+                            android:layout_below="@+id/rl_Product_name_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/status"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tv_status_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_regular"
+                                android:gravity="end"
+                                android:text="Active"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>>
+
+
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_status_info"
+                            android:id="@+id/rl_part3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_registartion_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/reg_date"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tv_registration_date_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_regular"
+                                android:gravity="end"
+                                android:text="2017-04-21"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_part3"
+                            android:id="@+id/rl_part4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_next_due_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/next_due_date"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tv_next_due_date_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_regular"
+                                android:gravity="end"
+                                android:text="21-05-2017"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>>
+
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_part4"
+                            android:id="@+id/rl_part5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_recurring_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/recurring_amount"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tv_recurring_amount_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_regular"
+                                android:gravity="end"
+                                android:text="10.0"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>>
+
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_part5"
+                            android:id="@+id/rl_part6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_billing_cycle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/billing_cycle"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tv_billing_cycle_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+
+                                android:fontFamily="@string/font_family_regular"
+                                android:gravity="end"
+                                android:text="Monthly"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                        </RelativeLayout>>
+
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_part6"
+                            android:id="@+id/rl_part7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_payment_method"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/payment_method"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tv_payment_method_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_regular"
+                                android:gravity="end"
+                                android:text="Gloabal iris"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_below="@+id/rl_part7"
+                            android:id="@+id/rl_part8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_first_time_payment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_medium"
+                                android:gravity="start"
+                                android:paddingLeft="10dp"
+                                android:text="@string/first_time_payment"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/tv_first_time_payment_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@string/font_family_regular"
+                                android:gravity="end"
+                                android:text="10.0"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                        </RelativeLayout>>
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--<android.support.v7.widget.CardView-->
+                    <!--android:focusable="true"-->
+                    <!--android:nextFocusDown="@+id/cv_product_detail"-->
+                    <!--android:background="@drawable/selector_services_layout"-->
+                    <!--android:id="@+id/cv_voip_details"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/cv_product_detail"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<RelativeLayout-->
+                        <!--android:id="@+id/rl_reply_ticket"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/cv_product_detail"-->
+                        <!--android:background="#fafaff"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<Button-->
+                            <!--android:id="@+id/bt_reply_toggle"-->
+                            <!--android:layout_width="1dp"-->
+                            <!--android:layout_height="1dp"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:background="#fafaff"-->
+                            <!--android:onClick="expandableButton1"-->
+                            <!--android:paddingLeft="25dp"-->
+                            <!--android:paddingRight="20dp"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="16dp" />-->
+
+                        <!--<RelativeLayout-->
+                            <!--android:id="@+id/rl_invoices"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:background="#167095">-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/tv_invoices_no"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_marginLeft="20dp"-->
+                                <!--android:layout_marginRight="50dp"-->
+                                <!--android:fontFamily="@string/font_family_medium"-->
+                                <!--android:text="VoIP Details"-->
+                                <!--android:textColor="@color/white"-->
+                                <!--android:textSize="16dp" />-->
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/iv_arrow_downward"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_alignParentRight="true"-->
+                                <!--android:layout_centerInParent="true"-->
+                                <!--android:layout_marginRight="20dp"-->
+                                <!--android:src="@drawable/down_arrow_white" />-->
+
+                        <!--</RelativeLayout>-->
+
+                        <!--<com.github.aakira.expandablelayout.ExpandableLinearLayout-->
+                            <!--android:id="@+id/expandableLayout1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/rl_invoices"-->
+                            <!--android:background="@color/white"-->
+                            <!--android:orientation="vertical"-->
+                            <!--app:ael_duration="200"-->
+                            <!--app:ael_expanded="false"-->
+                            <!--app:ael_interpolator="linear">-->
+
+                            <!--<RelativeLayout-->
+
+                                <!--android:id="@+id/rl_voip_detail"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_below="@+id/rl_reply_ticket"-->
+                                <!--android:background="@color/white">-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/tv_user_id"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:fontFamily="@string/font_family_medium"-->
+                                    <!--android:gravity="start"-->
+                                    <!--android:paddingLeft="10dp"-->
+                                    <!--android:text="Identity Number:"-->
+                                    <!--android:textColor="@color/voip_detail_text"-->
+                                    <!--android:textSize="14dp" />-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/tv_user_id_value"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_alignParentEnd="true"-->
+                                    <!--android:layout_alignParentRight="true"-->
+                                    <!--android:layout_marginRight="15dp"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:layout_toRightOf="@+id/tv_user_id"-->
+                                    <!--android:fontFamily="@string/font_family_medium"-->
+                                    <!--android:gravity="end"-->
+                                    <!--android:text="1221783618"-->
+                                    <!--android:textColor="@color/voip_detail_text"-->
+                                    <!--android:textSize="14dp" />-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/tv_password"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_below="@+id/tv_user_id"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:fontFamily="@string/font_family_medium"-->
+                                    <!--android:gravity="start"-->
+                                    <!--android:paddingLeft="10dp"-->
+                                    <!--android:text="Password:"-->
+                                    <!--android:textColor="@color/voip_detail_text"-->
+                                    <!--android:textSize="14dp" />-->
+
+                                <!--<ToggleButton-->
+                                    <!--android:id="@+id/tb_show_password"-->
+                                    <!--android:layout_width="46dp"-->
+                                    <!--android:layout_height="18dp"-->
+                                    <!--android:layout_alignParentEnd="true"-->
+                                    <!--android:layout_alignParentRight="true"-->
+                                    <!--android:layout_below="@+id/tv_user_id_value"-->
+                                    <!--android:layout_centerVertical="true"-->
+                                    <!--android:layout_marginRight="15dp"-->
+                                    <!--android:layout_marginTop="8dp"-->
+                                    <!--android:background="@drawable/status_invoice"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:textColor="@color/white"-->
+                                    <!--android:textOff="SHOW"-->
+                                    <!--android:textOn="HIDE"-->
+                                    <!--android:textSize="11dp" />-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/tv_password_value"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_below="@+id/tv_user_id_value"-->
+                                    <!--android:layout_marginRight="15dp"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:layout_toLeftOf="@+id/tb_show_password"-->
+
+                                    <!--android:layout_toRightOf="@+id/tv_password"-->
+                                    <!--android:fontFamily="@string/font_family_regular"-->
+                                    <!--android:gravity="end"-->
+                                    <!--android:inputType="numberPassword"-->
+                                    <!--android:text="Active@123"-->
+                                    <!--android:textColor="@color/voip_detail_text"-->
+                                    <!--android:textSize="14dp" />-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/tv_app_key"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_below="@+id/tv_password"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:fontFamily="@string/font_family_medium"-->
+                                    <!--android:gravity="start"-->
+                                    <!--android:paddingLeft="10dp"-->
+                                    <!--android:text="Your APP key:"-->
+                                    <!--android:textColor="@color/voip_detail_text"-->
+                                    <!--android:textSize="14dp" />-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/tv_app_key_value"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_alignParentEnd="true"-->
+                                    <!--android:layout_alignParentRight="true"-->
+                                    <!--android:layout_below="@+id/tv_password_value"-->
+                                    <!--android:layout_marginBottom="10dp"-->
+                                    <!--android:layout_marginRight="15dp"-->
+                                    <!--android:layout_marginTop="10dp"-->
+                                    <!--android:fontFamily="@string/font_family_regular"-->
+                                    <!--android:gravity="end"-->
+                                    <!--android:text="OsZg2s7ac"-->
+                                    <!--android:textColor="@color/voip_detail_text"-->
+                                    <!--android:textSize="14dp" />-->
+                            <!--</RelativeLayout>-->
+                        <!--</com.github.aakira.expandablelayout.ExpandableLinearLayout>-->
+                    <!--</RelativeLayout>-->
+                <!--</android.support.v7.widget.CardView>-->
+                <RelativeLayout
+                    android:id="@+id/rl_cancellation_request"
+
+                    android:foreground="@drawable/selector_services_layout"
+                    android:focusable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/cv_product_detail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:focusable="true"
+                        android:id="@+id/bt_resuest_canellation"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/tabslidecolor"
+
+                        android:text="@string/click_to_dashboard"
+
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>

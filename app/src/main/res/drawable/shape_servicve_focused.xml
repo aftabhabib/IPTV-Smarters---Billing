@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/listview_background_shape">
+    <padding android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp" />
+    <stroke android:width="10dp" android:color="#006400"  />
+
+    <solid android:color="#27b15b" />
+</shape>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/listview_background_shape">-->
+    <!--<padding android:left="2dp"-->
+        <!--android:top="2dp"-->
+        <!--android:right="2dp"-->
+        <!--android:bottom="2dp" />-->
+    <!--<gradient-->
+        <!--android:startColor="#27b15b"-->
+        <!--android:centerColor="@color/lb_basic_card_bg_color"-->
+        <!--android:endColor="#27b15b"-->
+        <!--android:type="sweep"-->
+        <!--android:angle="360" />-->
+<!--</shape>-->

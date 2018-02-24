@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1e1f23"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/rl_submenu"
+        android:layout_marginLeft="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_line_above"
+            android:layout_marginLeft="35dp"
+            android:src="@drawable/line_submenu_drawer"
+            android:layout_width="20dp"
+
+            android:layout_height="19dp"
+            />
+        <ImageView
+            android:id="@+id/iv_submenu_circle"
+            android:layout_centerVertical="true"
+            android:src="@drawable/circle_black"
+            android:layout_marginLeft="40dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"/>
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_marginLeft="35dp"
+            android:src="@drawable/line_submenu_drawer"
+            android:layout_marginTop="6dp"
+            android:layout_width="20dp"
+            android:layout_below="@+id/iv_submenu_circle"
+            android:layout_height="20dp"
+            />
+        <TextView
+            android:id="@+id/submenu"
+            android:layout_toRightOf="@+id/iv_submenu_circle"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:text="SubMenu"
+            android:textColor="#ffffff"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

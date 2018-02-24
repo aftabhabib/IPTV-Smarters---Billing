@@ -1,0 +1,207 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.LoginIPTVFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <!---->
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"/>
+
+
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/et_activation_code"
+            android:layout_below="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textCursorDrawable="@null"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="15dp"
+            android:maxLines="1"
+            android:lines="1"
+            android:imeOptions="actionNext"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/selector_login_fields"
+            android:focusable="true"
+            android:nextFocusDown="@+id/et_email"
+            android:hint="@string/activation_code"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_or"
+            android:layout_below="@id/et_activation_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/or"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toLeftOf="@id/tv_or"
+                android:background="@color/black"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/tv_or"
+                android:background="@color/black"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_enter_credentials"
+            android:layout_below="@+id/rl_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/credential_detail"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_below="@+id/tv_enter_credentials"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textCursorDrawable="@null"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="15dp"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:lines="1"
+            android:imeOptions="actionNext"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/selector_login_fields"
+            android:focusable="true"
+            android:nextFocusUp="@+id/et_activation_code"
+            android:nextFocusDown="@+id/et_password"
+            android:hint="@string/username"/>
+
+        <EditText
+            android:background="@drawable/selector_login_fields"
+            android:id="@+id/et_password"
+            android:layout_below="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textCursorDrawable="@null"
+            android:inputType="textPassword"
+            android:textSize="15dp"
+            android:maxLines="1"
+            android:hint="@string/password"
+            android:lines="1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:focusable="true"
+            android:nextFocusUp="@+id/et_email"
+            android:nextFocusDown="@+id/bt_submit"
+
+            />
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#0e2633"
+            android:layout_below="@+id/et_password"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-bold"
+          android:background="@drawable/selector_button"
+            android:focusable="true"
+            android:nextFocusUp="@+id/et_password"
+            android:nextFocusDown="@+id/cb_remember_me"
+            android:text="@string/submit"
+
+            />
+
+        <CheckBox
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/bt_submit"
+            android:id="@+id/cb_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:text="@string/remember_me"
+            android:fontFamily="sans-serif-medium"
+            android:focusable="true"
+            android:background="@drawable/selector_checkbox"
+            android:nextFocusUp="@+id/bt_submit"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/cb_remember_me"
+            android:layout_marginRight="25dp"
+            android:focusable="true"
+            android:background="@drawable/selector_checkbox"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/sign_up"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
+
+
+    <!--android:background="@drawable/selector_login_fields"-->

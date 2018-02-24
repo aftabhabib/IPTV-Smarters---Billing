@@ -1,0 +1,150 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_custom_config_addon"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.ViewCartProductAddonConfigCustomFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Demo Product"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:background="#28c0c6"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv_available_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_product_name"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Available Custom field"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_custom"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tv_available_custom">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_custom"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scrollbars="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_empty_view_custom_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="No item in Custom"
+                android:visibility="gone" />
+        </RelativeLayout>
+        >
+
+        <TextView
+            android:background="#28c0c6"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv_available_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_custom"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Available Config Option"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_config"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tv_available_config">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_config"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scrollbars="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_empty_view_config_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="No item in Config"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:background="#28c0c6"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:id="@+id/tv_available_addon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_config"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Available Addon"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_addon"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_below="@+id/tv_available_addon">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_addon"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scrollbars="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_empty_view"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="No item in Addon"
+                android:visibility="gone" />
+        </RelativeLayout>
+        >
+
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Continue  -->"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</FrameLayout>

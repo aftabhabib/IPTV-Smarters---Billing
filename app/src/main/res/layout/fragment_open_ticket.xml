@@ -1,0 +1,208 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_open_ticket"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.OpenTicketFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f6">
+
+        <RelativeLayout
+            android:id="@+id/rl_open_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:background="@color/tabslidecolor"
+                android:id="@+id/rl_opent_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small" />
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/backspress"
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>/>
+
+
+
+            <TextView
+                android:id="@+id/tv_open_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/open_ticket"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/v_open_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/tv_open_ticket"
+                android:background="@drawable/line_light_gray_small" />
+                </RelativeLayout>>
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_manage_domain_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_open_ticket"
+            android:layout_margin="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_open_ticket_dept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_alert_message_manage_products"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_open_ticket_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/open_ticket_brief"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_open_ticket_brief">
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/rl_first"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_open_ticket_brief"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/openticket_bt">
+                    <RelativeLayout
+                        android:id="@+id/rl_first_dept"
+                        android:background="@drawable/selector_services_layout"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/rl_second_dept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="start">
+
+                        <ImageView
+                            android:id="@+id/iv_email"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/email_icon" />
+
+                        <TextView
+                            android:id="@+id/tv_first_dept_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_family_regular"
+                            android:textSize="14dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/iv_email"
+                            android:text="@string/general_enquires"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                        </RelativeLayout>>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/rl_first"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@color/openticket_bt"
+
+                    android:gravity="center">
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_second_dept"
+                        android:background="@drawable/selector_services_layout"
+                        android:focusable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="start">
+
+                        <ImageView
+                            android:id="@+id/iv_email_second"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/email_icon" />
+
+                        <TextView
+                            android:id="@+id/tv_second_dept_name"
+                            android:fontFamily="@string/font_family_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/iv_email_second"
+                            android:text="SUPPORT DEPARTMENT"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                        </RelativeLayout>>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
+
+

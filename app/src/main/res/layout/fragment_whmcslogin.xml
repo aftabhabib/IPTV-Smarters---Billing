@@ -1,0 +1,239 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.LoginWHMCSFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_whmcs_bg"
+        tools:context="com.gehostingv2.gesostingv2iptvbilling.view.activity.LoginWHMCSActivity">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/rl_my_billing_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_billing_services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@string/font_family_regular"
+                android:gravity="center"
+                android:text="@string/my_billing_services"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/iv_line_my_billing_services"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_billing_services"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/divider" />
+
+            <ImageView
+                android:id="@+id/iv_line_my_billing_services1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_billing_services"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/divider" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_enter_credentials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_my_billing_service"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/credential_detail"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_enter_credentials"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_reactangle_transparent"
+            android:fontFamily="sans-serif"
+            android:hint="@string/email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/et_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_reactangle_transparent"
+            android:fontFamily="sans-serif"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/et_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_password"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_button"
+            android:fontFamily="sans-serif-bold"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="#0e2633"
+            android:textSize="15dp" />
+
+        <!--android:background="@drawable/rippple_submit_login"-->
+
+
+        <!--<com.skyfishjy.library.RippleBackground-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginLeft="25dp"-->
+        <!--android:layout_marginRight="25dp"-->
+        <!--android:layout_below="@id/et_password"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:id="@+id/content_submit"-->
+        <!--app:rb_color="#E0E0E0"-->
+        <!--app:rb_radius="35dp"-->
+        <!--app:rb_rippleAmount="9"-->
+        <!--app:rb_duration="2000"-->
+        <!--app:rb_type="fillRipple"-->
+        <!--app:rb_scale="6">-->
+        <!--<Button-->
+        <!--android:id="@+id/et_submit"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:textColor="#0e2633"-->
+        <!--android:layout_below="@+id/et_password"-->
+        <!--android:textSize="15dp"-->
+        <!--android:gravity="center"-->
+        <!--android:fontFamily="sans-serif-bold"-->
+        <!--android:background="@drawable/rippple_submit_login"-->
+        <!--android:text="@string/submit"-->
+        <!--/>-->
+        <!--</com.skyfishjy.library.RippleBackground>-->
+
+
+        <CheckBox
+            android:id="@+id/cb_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_submit"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:buttonTint="@color/white"
+            android:focusable="true"
+            android:background="@drawable/selector_checkbox"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/remember_me"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/cb_remember_me"
+            android:layout_marginRight="25dp"
+            android:focusable="true"
+            android:background="@drawable/selector_checkbox"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/sign_up"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/cb_remember_me"
+            android:layout_alignParentLeft="true"
+
+            android:id="@+id/tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+           android:background="@drawable/selector_checkbox"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/forget_password"
+            android:textColor="@color/white" />
+
+        <!--<com.skyfishjy.library.RippleBackground -->
+            <!---->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/content"-->
+            <!--android:layout_width="125dp"-->
+            <!--android:layout_height="18dp"-->
+           <!---->
+            <!---->
+            <!--app:rb_color="#E0E0E0"-->
+            <!--app:rb_duration="2000"-->
+            <!--app:rb_radius="35dp"-->
+            <!--app:rb_rippleAmount="9"-->
+            <!--app:rb_scale="9"-->
+            <!--app:rb_type="fillRipple">-->
+
+            <!---->
+        <!--</com.skyfishjy.library.RippleBackground>-->
+
+
+    </RelativeLayout>
+
+</FrameLayout>

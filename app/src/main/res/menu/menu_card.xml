@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_play"
+        android:title="@string/nav_play" />
+    <item
+        android:visible="false"
+        android:id="@+id/nav_add_to_fav"
+        android:title="@string/add_to_favourite" />
+    <item
+        android:visible="false"
+        android:id="@+id/nav_remove_from_fav"
+        android:title="@string/remove_from_favourite" />
+    <!--<item-->
+        <!--android:id="@+id/nav_viewEPG"-->
+        <!--android:title="@string/view_epg" />-->
+</menu>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_play"
+
+        android:title="@string/nav_play" />
+    <item
+        android:id="@+id/nav_add_to_fav"
+        android:title="@string/add_to_favourite"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_remove_from_fav"
+        android:title="@string/remove_from_favourite"
+        android:visible="false" />
+    <item
+        android:id="@+id/menu_view_details"
+        android:title="@string/menu_view_details" />
+
+
+</menu>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+    <!--<item-->
+        <!--android:id="@+id/empty"-->
+        <!--android:title="inner"-->
+        <!--android:orderInCategory="101"-->
+        <!--app:showAsAction="always"-->
+        <!--android:icon="@drawable/menu_dots">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_play"-->
+                <!--android:orderInCategory="100"-->
+                <!--android:icon="@drawable/play"-->
+                <!--android:title="@string/nav_play"-->
+                <!--/>-->
+            <!--<item-->
+                <!--android:icon="@drawable/att_to_fav"-->
+                <!--android:id="@+id/nav_add_to_fav"-->
+                <!--android:title="@string/add_to_favourite"-->
+                <!--android:visible="false"/>-->
+            <!--<item-->
+                <!--android:icon="@drawable/att_to_fav"-->
+                <!--android:id="@+id/nav_remove_from_fav"-->
+                <!--android:title="@string/remove_from_favourite"-->
+                <!--android:visible="false"/>-->
+
+            <!--<item-->
+                <!--android:icon="@drawable/att_to_fav"-->
+                <!--android:id="@+id/menu_view_details"-->
+                <!--android:title="@string/menu_view_details"-->
+                <!--/>-->
+        <!--</menu>-->
+
+    <!--</item>-->
+
+<!--</menu>-->
+
+
+
+

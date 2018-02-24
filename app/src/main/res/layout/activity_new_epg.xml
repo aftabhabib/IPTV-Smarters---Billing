@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_toolbar"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:paddingTop="10dp"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:fitsSystemWindows="true"
+                android:layout_height="90dp"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+                android:minHeight="?attr/actionBarSize"
+                local:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/tv_header_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/logo_home_new" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/tv_divider"
+                android:background="@color/colorPrimary"
+                android:layout_below="@+id/appbar_toolbar"/>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/appbar_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/sliding_tabs"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    app:tabTextColor="@color/white"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabBackground="@drawable/tab_color_selector"
+                    app:tabMode="scrollable" />
+
+                <com.gehostingv2.iptvsmarters.view.utility.NonSwipeableViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sliding_tabs"
+                    android:layout_weight="1"
+                    android:background="@color/dark_gray" />
+
+
+
+
+                <ProgressBar
+                    android:id="@+id/pb_loader"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sliding_tabs"
+                    android:layout_marginTop="50dp"
+                    android:indeterminate="true" />
+
+            </RelativeLayout>
+            <include
+                layout="@layout/app_bar_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.design.widget.AppBarLayout>
+        <android.support.design.widget.NavigationView
+
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:itemBackground="@layout/nav_view_item_background"
+            app:headerLayout="@layout/nav_header_drawer"
+            app:menu="@menu/menu_dashboard" />
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

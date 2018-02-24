@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="4dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="4dp"
+    android:background="@color/light_gray"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_view_provider"
+        android:text="linearView"
+        android:visibility="invisible"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        />
+    <TextView
+
+        android:id="@+id/tv_noStream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_stream_found"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:layout_marginTop="60dp"
+        android:textSize="30dp"
+        android:fontFamily="@string/font_family_thin"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        />
+    <TextView
+
+        android:id="@+id/tv_egp_required"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/epg_required_for_archive"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:layout_marginTop="60dp"
+        android:textSize="14dp"
+        android:gravity="center"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sliding_tabs"
+        android:layout_marginTop="50dp"
+        android:indeterminate="true" />
+    <TextView
+        android:fontFamily="@string/font_family_thin"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="60dp"
+        android:visibility="invisible"
+        android:id="@+id/tv_no_record_found"
+        android:text="@string/no_record_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+
+
+
+
+
+
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+
+    <!--&gt;-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/my_recycler_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="vertical"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_marginTop="60dp"-->
+        <!--android:textSize="30dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:fontFamily="@string/font_family_thin"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/tv_noStream"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/no_stream_found"-->
+        <!--android:visibility="gone"-->
+        <!--android:textAlignment="center"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_marginTop="60dp"-->
+        <!--android:textSize="30dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:fontFamily="@string/font_family_thin"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/tv_no_record_found"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--android:text="@string/no_record_found"-->
+
+        <!--/>-->
+    <!--<ProgressBar-->
+        <!--android:id="@+id/pb_loader"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/sliding_tabs"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:indeterminate="true" />-->
+
+<!--</RelativeLayout>-->

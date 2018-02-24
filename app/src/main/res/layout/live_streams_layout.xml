@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/rl_streams_layout"
+    android:layout_height="170dp"
+    android:orientation="horizontal"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingBottom="1dp"
+    android:paddingTop="1dp"
+    android:focusable="true"
+    android:background="@drawable/selector_vod_layout">
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        card_view:cardElevation="2dp"
+        card_view:cardUseCompatPadding="true">
+        <ImageView
+            android:id="@+id/iv_channel_logo"
+            android:layout_marginTop="8dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:src="@drawable/iptv_placeholder"
+            android:tag="image_tag" />
+        <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/iv_play"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="70dp"-->
+        <!--android:background="@drawable/player_play"-->
+        <!--/>-->
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_movie_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/iv_favourite"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/favourite_yellow"
+                android:background="@drawable/selector_favourite_vod"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_channel_bottom"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/rl_movie_image"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp">
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#ffffff"
+                android:id="@+id/relative_layout_loading"
+                android:layout_alignParentBottom="true"
+                >
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/tv_movie_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:text="@string/loading"
+                    android:ellipsize="marquee"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_movie_name"
+                    android:id="@+id/tv_current_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:paddingStart="5dp"
+                    android:ellipsize="marquee"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10dp" />
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_time"
+                    android:layout_above="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/progressBar"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10dp" />
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/tv_current_live"
+                    android:layout_centerHorizontal="true"
+                    android:progressDrawable="@drawable/epgprogress" />
+            </RelativeLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:id="@+id/ll_menu"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tv_streamOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_menu"
+                    android:text="&#8942;"
+                    android:layout_marginRight="5dp"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+    <!--</android.support.v7.widget.CardView>-->
+
+</RelativeLayout>
+
+
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:id="@+id/rl_streams_layout"-->
+    <!--android:layout_height="160dp"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:paddingLeft="1dp"-->
+    <!--android:paddingRight="1dp"-->
+    <!--android:paddingBottom="1dp"-->
+    <!--android:paddingTop="1dp"-->
+    <!--android:focusable="true"-->
+    <!--android:background="@drawable/selector_vod_layout">-->
+    <!--<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/card_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!--card_view:cardElevation="2dp"-->
+        <!--card_view:cardUseCompatPadding="true">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_channel_logo"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+
+            <!--android:layout_weight="1"-->
+            <!--android:src="@drawable/iptv_placeholder"-->
+            <!--android:tag="image_tag" />-->
+        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/iv_play"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="70dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@drawable/player_play"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+
+
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_movie_image"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:id="@+id/iv_favourite"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:src="@drawable/favourite_yellow"-->
+                <!--android:background="@drawable/selector_favourite_vod"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--/>-->
+
+        <!--</RelativeLayout>-->
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_channel_bottom"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_below="@+id/rl_movie_image"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="40dp">-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:background="#ffffff"-->
+                <!--android:id="@+id/relative_layout_loading"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--&gt;-->
+
+                <!--<TextView-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:id="@+id/tv_movie_name"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_marginLeft="0dp"-->
+                    <!--android:layout_marginRight="0dp"-->
+                    <!--android:paddingTop="8dp"-->
+                    <!--android:paddingLeft="5dp"-->
+                    <!--android:text="@string/loading"-->
+                    <!--android:ellipsize="marquee"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textSize="12dp" />-->
+
+            <!--</RelativeLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:id="@+id/ll_menu"-->
+                <!--android:layout_height="40dp">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_streamOptions"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@drawable/selector_menu"-->
+                    <!--android:text="&#8942;"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:textAppearance="?android:textAppearanceLarge"-->
+                    <!--android:textSize="25dp" />-->
+
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--&lt;!&ndash;</android.support.v7.widget.CardView>&ndash;&gt;-->
+
+<!--</RelativeLayout>-->

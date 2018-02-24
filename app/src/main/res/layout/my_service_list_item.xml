@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_list_itm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/shape_reactangle_small"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    app:cardCornerRadius="@dimen/activity_vertical_margin"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    app:cardElevation="@dimen/activity_vertical_margin">
+        <TextView
+            android:id="@+id/tv_product_services"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="9dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Delux"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_pricing1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"/>
+            <TextView
+                android:id="@+id/tv_pricing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="9.95"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"/>
+                <TextView
+                    android:id="@+id/tv_pricing2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="USD"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"/>
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_billin_cycle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:text="Monthly"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_next_due_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="25/11/2017"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="20dp"
+            android:text="Activate"
+            android:background="@drawable/shape_reactangle_small"
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
+
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search_view"
+        android:title="@string/search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/empty"
+        android:title="inner"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@drawable/menu_dots">
+        <menu>
+
+            <item
+                android:icon="@drawable/gridview_menu"
+                android:visible="true"
+                android:id="@+id/layout_view_grid"
+                android:title="@string/view_grid"
+                />
+            <item
+                android:icon="@drawable/listview_menu"
+                android:visible="true"
+                android:id="@+id/layout_view_linear"
+                android:title="@string/view_Linear"
+                />
+
+            <item
+                android:icon="@drawable/livetv_icon_menu"
+                android:id="@+id/menu_load_channels_vod1"
+                android:title="@string/load_channels_vod" />
+            <item
+                android:icon="@drawable/guide_icon_menu"
+                android:id="@+id/menu_load_tv_guide1"
+                android:title="@string/load_tv_guide" />
+
+
+            <item
+                android:id="@+id/action_logout1"
+                android:visible="false"
+                android:orderInCategory="100"
+                android:icon="@drawable/logout_icon_menu"
+                android:title="@string/menu_logout"
+                />
+            <item
+
+                android:icon="@drawable/sort"
+                android:id="@+id/menu_sort"
+                android:title="SORT" />
+
+        </menu>
+
+    </item>
+
+</menu>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<menu xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+    <!--<item-->
+    <!--android:id="@+id/main"-->
+    <!--android:icon="@drawable/logo"-->
+    <!--android:title="availa"-->
+    <!--android:orderInCategory="100"-->
+    <!--app:showAsAction="never" />-->
+    <!--<menu>-->
+
+    <!--</menu>-->
+    <!--</menu>-->

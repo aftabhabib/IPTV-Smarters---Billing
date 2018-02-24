@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- enabled and focused state -->
+    <item
+        android:drawable="@drawable/shape_services_lyout_focused"
+        android:state_enabled="true"
+        android:state_focused="true"/>
+
+    <!--&lt;!&ndash; enabled state &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/shape_live_streams_layout" android:state_enabled="true"/>-->
+
+</selector>

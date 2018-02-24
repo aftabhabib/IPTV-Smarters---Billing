@@ -1,0 +1,180 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gehostingv2.iptvsmarters.view.activity.ParentalControlActivitity">
+
+    <ScrollView
+        android:background="@color/dark_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardBackgroundColor="#ffffffff">
+
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:drawablePadding="7dp"
+                            android:drawableLeft="@drawable/parental_security_key"
+                            android:id="@+id/tv_lock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/lock_category"
+                            android:textColor="@color/dark_black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/ll_expandable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_lock">
+
+                            <ImageView
+                                android:id="@+id/iv_div"
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/black" />
+
+                            <EditText
+                                android:background="@drawable/selector_parental_setting"
+                                android:id="@+id/tv_old_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/iv_div"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@string/font_family_regular"
+                                android:hint="@string/old_password"
+                                android:inputType="numberPassword"
+                                android:paddingLeft="10dp"
+                                android:textColorHint="@color/logout_color"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/tv_new_password"/>
+
+                            <ImageView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_below="@+id/tv_old_password"
+                                android:id="@+id/iv_div1"
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/black" />>
+
+                            <EditText
+                                android:background="@drawable/selector_parental_setting"
+                                android:fontFamily="@string/font_family_regular"
+                                android:id="@+id/tv_new_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/tv_old_password"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="12dp"
+                                android:hint="@string/new_password"
+                                android:inputType="numberPassword"
+                                android:paddingLeft="10dp"
+                                android:textColorHint="@color/logout_color"
+                                android:focusable="true"
+                                android:nextFocusUp="@+id/tv_old_password"
+                                android:nextFocusDown="@+id/tv_confirm_password"/>
+                            <ImageView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_below="@+id/tv_new_password"
+                                android:id="@+id/iv_div2"
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/black" />>
+
+
+                            <EditText
+                                android:fontFamily="@string/font_family_regular"
+                                android:background="@drawable/selector_parental_setting"
+                                android:id="@+id/tv_confirm_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/tv_new_password"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="12dp"
+                                android:hint="@string/confirm_password"
+                                android:inputType="numberPassword"
+                                android:paddingLeft="10dp"
+                                android:textColorHint="@color/logout_color"
+                                android:focusable="true"
+                                android:nextFocusUp="@+id/tv_new_password"
+                                android:nextFocusDown="@+id/bt_save_password"/>
+                            <ImageView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_below="@+id/tv_confirm_password"
+                                android:id="@+id/iv_div3"
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/black" />>
+                            <Button
+                                android:textColor="@drawable/selector_save_color"
+                                android:background="@drawable/selector_save_button"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/bt_save_password"
+                                android:layout_width="155dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_confirm_password"
+                                android:layout_marginBottom="10dp"
+                                android:text="@string/update_password"
+                                android:focusable="true"
+                                android:nextFocusUp="@+id/tv_confirm_password"
+                                />>
+
+                            <!--<Button-->
+                            <!--android:visibility="gone"-->
+                            <!--android:layout_marginTop="30dp"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:layout_marginEnd="25dp"-->
+                            <!--android:id="@+id/bt_close"-->
+                            <!--android:layout_width="75dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/tv_confirm_password"-->
+                            <!--android:layout_marginBottom="10dp"-->
+                            <!--android:text="@string/close"-->
+                            <!--android:focusable="true"-->
+                            <!--android:background="@drawable/selector_save_button"-->
+                            <!--android:nextFocusUp="@+id/tv_confirm_password"-->
+                            <!--android:nextFocusLeft="@+id/bt_save_password"-->
+                            <!--/>>-->
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>>
+</FrameLayout>

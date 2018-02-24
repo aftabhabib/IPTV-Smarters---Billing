@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/light_gray"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tv_view_provider"
+        android:text="linearView"
+        android:visibility="invisible"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        />
+
+    <TextView
+        android:layout_marginTop="60dp"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/font_family_thin"
+        android:gravity="center"
+
+        android:id="@+id/tv_noStream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_record_found"
+        android:visibility="gone"
+        android:textAlignment="center"
+
+        />
+    <TextView
+        android:layout_marginTop="60dp"
+        android:textSize="30dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@string/font_family_thin"
+        android:gravity="center"
+        android:id="@+id/tv_no_record_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_record_found"
+        android:visibility="gone"
+        android:textAlignment="center"
+        />
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sliding_tabs"
+        android:layout_marginTop="50dp"
+        android:indeterminate="true" />
+</RelativeLayout>

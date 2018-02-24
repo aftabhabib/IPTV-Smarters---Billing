@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/tabslidecolor</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
+    <style name="ThemeOverlay.AppCompat.navTheme">
+
+        <!-- Color of text and icon when SELECTED -->
+        <item name="colorPrimary">#b1a8a8</item>
+
+        <!-- Background color when SELECTED -->
+        <item name="colorControlHighlight">#b1a8a8</item>
+
+    </style>
+
+    <style name="RootTheme" parent="android:Theme.Holo"/>
+    <style name="PlayerTheme" parent="@style/RootTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Required for Lollipop. -->
+        <item name="android:overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">5dp</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="SpinnerPop" parent="Base.Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:paddingLeft">3dp</item>
+    </style>
+
+
+    <style name="SpinnerwithNoArrow" parent="@android:style/Widget.Spinner">
+        <item name="android:background">@color/invoice_bg</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
+
+    <color name="yellow">#ffff00</color>
+
+    <style name="whiteLoader" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/white</item>
+    </style>
+</resources>
+
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--@android:drawable/edit_text-->

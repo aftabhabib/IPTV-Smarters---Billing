@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="40dp"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <RelativeLayout
+        android:id="@+id/rl_profile_top"
+        android:layout_width="300dp"
+        android:background="@color/dark_black"
+        android:layout_centerHorizontal="true"
+        android:layout_height="90dp">
+        <ImageView
+            android:id="@+id/iv_logout"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="85dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/logout_icon" />
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_toRightOf="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@string/font_family_medium"
+            android:layout_marginRight="20dp"
+            android:text="@string/logout"/>>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+    <!--logutcolor code-->
+    <!--light_gray-->
+
+    <!--foricondrwaable-->
+    <!--logout-->
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/empty"
+        android:title="inner"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@drawable/menu_dots">
+        <menu>
+            <!--<item-->
+                <!--android:id="@+id/action_logout"-->
+                <!--android:orderInCategory="100"-->
+                <!--android:icon="@drawable/logout_icon_menu"-->
+                <!--android:title="@string/menu_logout"-->
+                <!--/>-->
+            <item
+                android:icon="@drawable/livetv_icon_menu"
+                android:id="@+id/menu_load_channels_vod"
+                android:title="@string/load_channels_vod" />
+            <item
+                android:icon="@drawable/guide_icon_menu"
+                android:id="@+id/menu_load_tv_guide"
+                android:title="@string/load_tv_guide" />
+        </menu>
+
+    </item>
+
+</menu>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+    <!--<item-->
+        <!--android:id="@+id/main"-->
+        <!--android:icon="@drawable/logo"-->
+        <!--android:title="availa"-->
+        <!--android:orderInCategory="100"-->
+        <!--app:showAsAction="never" />-->
+    <!--<menu>-->
+
+    <!--</menu>-->
+<!--</menu>-->

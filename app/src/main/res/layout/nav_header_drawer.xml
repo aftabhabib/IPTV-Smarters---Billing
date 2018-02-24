@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <RelativeLayout
+        android:id="@+id/profile_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close"
+            android:id="@+id/iv_close_drawer"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/selector_drawer_close"
+            android:layout_height="30dp">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:scaleType="fitXY"
+            android:alpha=".08"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginTop="25dp"
+            android:id="@+id/iv_profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo"
+            app:civ_border_color="@color/light_black"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:id="@+id/tv_client_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iv_profile_image"
+            android:fontFamily="@string/font_family_regular"
+            android:text="@string/client_username"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

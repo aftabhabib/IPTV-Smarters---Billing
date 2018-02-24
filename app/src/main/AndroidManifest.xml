@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gehostingv2.gesostingv2iptvbilling">
+
+    <uses-sdk tools:node="merge" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.read_phone_state"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- android:name="com.gehostingv2.gesostingv2iptvbilling.view.app_shell.AppController" -->
+    <application
+        android:allowBackup="false"
+        android:banner="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup,android:supportsRtl">
+        <activity
+            android:name=".view.activity.SplashActivity"
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d40efe1849eb789de93591978d6addac650f777c" />
+
+        <activity android:name=".view.activity.LoginWHMCSActivity" />
+        <activity
+            android:name=".view.activity.DashboardActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name=".view.activity.LiveTVTabViewActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".view.activity.NSTPlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:launchMode="singleTop"
+            android:theme="@style/PlayerTheme" />
+        <activity android:name=".view.activity.VodTabViewActivity" />
+        <activity android:name=".view.activity.VodPlayerActivity" />
+        <activity
+            android:name=".view.activity.ForgetPasswordActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".view.activity.ServicesActivity" />
+        <activity android:name=".view.activity.InvoicesActivity" />
+        <activity android:name=".view.activity.TicketsActivity" />
+        <activity android:name=".view.activity.OpenTicketActivity" />
+        <activity android:name=".view.activity.NoSubscriptionActivity" />
+        <activity android:name=".view.activity.LoginWelcomeActivity" />
+        <activity android:name=".view.activity.AccountInfoActivity" />
+        <activity android:name=".view.activity.PlayerSettingsActivity" />
+        <activity
+            android:name=".view.activity.ExoPlayerVodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.activity.ExoPlayerLiveStreamsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/PlayerTheme" />
+        <activity android:name=".view.activity.VLCPlayerLiveStreamsActivity" />
+        <activity android:name=".view.activity.VLCPlayerVodActivity" />
+        <activity android:name=".view.activity.MxPlayerLiveStreamsActivity" />
+        <activity android:name=".view.activity.MxPlayerVodActivity" />
+        <activity android:name=".view.activity.NoServicePurchasedActivity" />
+        <activity android:name=".view.activity.AuthorizationIssueActivity" />
+        <activity android:name=".view.activity.OrderNewServicesActivtiy" />
+        <activity android:name=".view.activity.ErrorCode210IPTVUserNameActivity" />
+        <activity android:name=".view.activity.ErrorCode211IPTVPasswordActivity" />
+        <activity android:name=".view.activity.ErrorCode215IPTVServiceStatusActivity" />
+        <activity android:name=".view.activity.ImportStreamsActivity" />
+        <activity android:name=".view.activity.ImportEPGActivity" />
+
+        <!-- Firebase Notifications -->
+        <service android:name=".view.notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".view.notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+        <activity
+            android:name=".view.activity.LiveStreamEpgAcitivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.activity.SettingssActivity" />
+        <activity android:name=".view.activity.ParentalControlActivity" />
+        <activity
+            android:name=".view.nstplayer.NSTPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.nstplayer.NSTPlayerVodActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" />
+
+        <!-- <service android:name=".miscelleneious.loadlivemovieepgdata.AutoLoadService" /> -->
+        <!-- <service android:name=".miscelleneious.loadlivemovieepgdata.AlarmService" /> -->
+
+
+        <!-- <service -->
+        <!-- android:name=".miscelleneious.loadlivemovieepgdata.NotificationIntentService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" -->
+        <!-- /> -->
+
+
+        <!-- <receiver -->
+        <!-- android:name=".miscelleneious.loadlivemovieepgdata.NotificationEventReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process=":remote" /> -->
+
+
+        <!-- <receiver -->
+        <!-- android:name=".miscelleneious.loadlivemovieepgdata.NotificationServiceStarterReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:process=":remote"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="android.intent.action.TIMEZONE_CHANGED" /> -->
+        <!-- <action android:name="android.intent.action.TIME_SET" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- <receiver -->
+        <!-- android:name=".miscelleneious.loadlivemovieepgdata.AlarmReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:process=":remote"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="android.intent.action.TIMEZONE_CHANGED" /> -->
+        <!-- <action android:name="android.intent.action.TIME_SET" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity android:name=".view.activity.ViewDetailsActivity" />
+        <activity android:name=".view.activity.EPGTimeShiftActivity" />
+        <activity android:name=".view.activity.StreamFormatActivity" />
+        <activity
+            android:name=".view.player.PlayerVODActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/PlayerTheme">
+            <intent-filter>
+                <action android:name="com.nst.exoplayer.app.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.nst.exoplayer.app.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.VodActivityNewFlow" />
+        <activity android:name=".view.activity.VoDListViewCatActivity" />
+        <activity android:name=".view.activity.TVArchiveActivity" />
+        <activity android:name=".view.activity.SubTVArchiveActivity" />
+        <activity
+            android:name=".view.nstplayer.NSTPlayerArchiveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.activity.TimeFormatActivity" />
+        <activity android:name=".view.activity.EPGChannelUpdateActivity" />
+        <activity android:name=".view.activity.LiveVodLayoutActivity" />
+        <activity android:name=".view.activity.LiveTVListViewActivity" />
+        <activity android:name=".view.activity.LiveTVListViewCatActivity" />
+        <activity android:name=".view.activity.VodListViewActivity" />
+        <activity android:name=".view.activity.VoDListViewSubCatActivity"></activity>
+    </application>
+
+</manifest>

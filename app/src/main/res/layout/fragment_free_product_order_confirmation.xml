@@ -1,0 +1,87 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fl_free_product"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.FreeProductOrderConfirmationFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="#ffffff">
+            <ImageView
+                android:id="@+id/iv_divider_"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c2c2c2" />
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="sans-serif"
+                android:text="Order Confirmation"
+                android:textColor="#545454"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rl_header"
+            android:background="#c2c2c2" />
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_divider">
+
+            <TextView
+                android:textSize="18dp"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="50dp"
+                android:id="@+id/tv_thanks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thank you for your order. You will receive a confirmation email shortly" />
+            <Button
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@string/font_family_regular"
+                android:textColor="@color/white"
+                android:background="@color/active_contact_tab"
+                android:layout_below="@+id/tv_thanks"
+                android:text="Order Number is "
+                android:id="@+id/bt_order_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+        <Button
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@string/font_family_regular"
+            android:textColor="@color/white"
+            android:background="@drawable/ripple_send_reply_ticket"
+            android:text="Click to continue "
+            android:id="@+id/bt_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

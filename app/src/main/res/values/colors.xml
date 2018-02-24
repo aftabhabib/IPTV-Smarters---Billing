@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>      //new
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorWHMCS">#4b4948</color>
+    <color name="colorIPTV">#5138e9</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="service_status_cancelled">#9bc4f5</color>
+    <color name="service_status_active">#44ad47</color>
+    <color name="service_status_pending">#d95450</color>
+    <color name="service_status_suspended">#f0ad4e</color>
+    <color name="service_status_terminated">#666666</color>
+    <color name="epg_event_layout_background_no_prog">#9393af</color>
+
+    <color name="manage_name_server_text">#3b3b3b</color>
+    <color name="voip_detail_text">#616161</color>
+    <color name="add_funds_text">#616161</color>
+    <color name="add_funds_edit_text_bg">#e0e8ea</color>
+
+    <color name="dim_white">#e6e4e5</color>
+
+    <color name="open_ticket_text_view_bg">#e0e8ea</color>
+
+
+    <color name="chat_bubble_client">#e9ecf1</color>
+    <color name="chat_bubble_admin">#788db1</color>
+
+
+    <color name="light_black">#292c31</color>
+    <color name="dark_black">#202125</color>
+    <color name="light_gray">#6ee1e1e1</color>
+    <color name="logout_color">#474a4f</color>
+
+    <color name="suspended_tab_count">#ff6f43</color>
+    <color name="pending_tab_count">#e4cc00</color>
+    <color name="active_tab_count">#0cdc78</color>
+    <color name="cancelled_tab_count">#0c99e2</color>
+    <color name="terminated_tab_count">#ffc600</color>
+
+    <color name="unselected_tab_count">#afafb2</color>
+    <color name="contacts_bottom_text_color">#787878</color>
+
+
+    <color name="cursor">#75bec8</color>
+    <color name="view_ticket_request">#3e6372</color>
+    <color name="blue">#57aacc</color>
+    <color name="chat_buble">#788db1</color>
+    <color name="nonselecteddot">#d2d2d2</color>
+    <color name="invoice_bg">#e0e8ea</color>
+    <color name="text_in_cart">#545454</color>
+    <color name="cart_bt_backround_color">#08668c</color>
+    <color name="cart_list_item_color">#454545</color>
+    <color name="active_contact_tab">#28c0c6</color>
+    <color name="dialer_number">#191919</color>
+    <color name="contact_dialler_text">#6c6c6c</color>
+    <color name="ripple_color">#6c6c6c</color>
+    <color name="contact_call_log_list_item_color">#7b7b7b</color>
+    <color name="product_custom_field">#616161</color>
+    <color name="openticket_bt">#59c656</color>
+    <color name="invoice_detail_bt">#59c656</color>
+    <color name="manage_domain_bt">#59c656</color>
+    <color name="add_funds_bt">#59c656</color>
+    <color name="config_bt">#59c656</color>
+    <color name="custom_bt">#59c656</color>
+    <color name="addon_bt">#59c656</color>
+    <color name="radio_bt">#044c96</color>
+    <color name="dark_gray">#6ec9c5c5</color>
+    <color name="tabslidecolor">#004d91</color>
+    <color name="login_iptv">#231e97</color>
+    <color name="login_whmcs">#29806c</color>
+    <string name="font_family_light">sans-serif-light</string>
+    <string name="font_family_medium">sans-serif-medium</string>
+    <string name="font_family_regular">sans-serif</string>
+    <string name="font_family_condensed">sans-serif-condensed</string>
+    <string name="font_family_black">sans-serif-black</string>
+    <string name="font_family_thin">sans-serif-thin</string>
+    <string name="font_family_bold">sans-serif-bold</string>
+    <array name="array_dot_active">
+        <item>@color/addon_bt</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/tabslidecolor</item>
+    </array>
+
+
+    <color name="epg_background">#ff1e1e1e</color>
+    <color name="epg_channel_layout_background">#ff323232</color>
+    <color name="epg_event_layout_background">#ff4f4f4f</color>
+    <color name="epg_event_layout_background_current">#ff3b3b3b</color>
+    <color name="epg_event_layout_background_selected">#0085C3</color>
+    <color name="epg_event_layout_text">#ffd6d6d6</color>
+    <color name="epg_time_bar">#ED1C24</color>
+    <color name="dark_black2">#b0202125</color>
+    <color name="colorPrimaryFocus">#5b5858</color>
+
+    <color name="movie_info_play">#7dac2a</color>
+
+    <color name="accent">#FF5722</color>
+    <color name="transparent">#00000000</color>
+    <color name="Grey_50">#FAFAFA</color>
+    <color name="Grey_100">#F5F5F5</color>
+    <color name="Grey_200">#EEEEEE</color>
+    <color name="Grey_300">#E0E0E0</color>
+    <color name="Grey_400">#BDBDBD</color>
+    <color name="Grey_500">#9E9E9E</color>
+    <color name="Grey_600">#757575</color>
+    <color name="Grey_700">#616161</color>
+    <color name="Grey_800">#424242</color>
+    <color name="Grey_900">#212121</color>
+    <color name="active_green">#88ce76</color>
+</resources>
+
+

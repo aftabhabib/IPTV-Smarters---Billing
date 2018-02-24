@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exo_playback_control_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#96000000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="50dp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="15dp"
+                app:srcCompat="@drawable/hplib_ic_back" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Video Title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFF"
+                android:textSize="22dp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cast_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/seekbar_time"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="#96000000"
+            android:foregroundGravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/exo_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="00:00:00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFF" />
+
+            <com.google.android.exoplayer2.ui.DefaultTimeBar
+                android:id="@+id/exo_progress"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:touch_target_height="50dp" />
+            <!--android:indeterminate="false"
+            style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+            android:thumbTint="#ffffff"
+            android:progress="0"
+            android:secondaryProgress="0"
+            android:splitTrack="false"
+            android:progressTint="#2473ac"
+            android:secondaryProgressTint="#9A8486"
+            android:foregroundTint="#7F5C62"
+            android:foreground="#7F5C62" />-->
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/exo_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="00:00:00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controls"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#96000000"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:visibility="visible">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_lock"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0"
+                android:background="@null"
+                android:padding="5dp"
+                app:srcCompat="@drawable/hplib_ic_lock" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!--<android.support.v7.widget.AppCompatImageView-->
+                    <!--android:id="@+id/exo_prev"-->
+                    <!--android:layout_width="32dp"-->
+                    <!--android:layout_height="32dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginRight="24dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@null"-->
+                    <!--android:cropToPadding="false"-->
+                    <!--android:minWidth="32dp"-->
+                    <!--android:padding="7dp"-->
+                    <!--app:srcCompat="@drawable/hplib_ic_previous" />-->
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/exo_rew"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:minWidth="32dp"
+                    android:padding="7dp"
+                    app:srcCompat="@drawable/hplib_ic_rewind" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/exo_pause"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:minWidth="32dp"
+                    android:padding="7dp"
+                    app:srcCompat="@drawable/hplib_ic_pause" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/exo_play"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:minWidth="32dp"
+                    android:padding="7dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/hplib_ic_play_download" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/exo_ffwd"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="24dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:minWidth="32dp"
+                    android:padding="7dp"
+                    app:srcCompat="@drawable/hplib_ic_forward" />
+
+                <!--<android.support.v7.widget.AppCompatImageView-->
+                    <!--android:id="@+id/exo_next"-->
+                    <!--android:layout_width="32dp"-->
+                    <!--android:layout_height="32dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@null"-->
+                    <!--android:minWidth="32dp"-->
+                    <!--android:padding="7dp"-->
+                    <!--app:srcCompat="@drawable/hplib_ic_next" />-->
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0"
+                android:alpha="1"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:padding="5dp"
+                android:visibility="visible" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="24dp"
+                android:layout_weight="0"
+                android:alpha="1"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:padding="5dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/hplib_ic_subtitle" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_settings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0"
+                android:background="@null"
+                android:foregroundGravity="right"
+                android:padding="5dp"
+                android:text="Settings"
+                app:srcCompat="@drawable/hplib_ic_settings" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/loadingVPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/unlock_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#96000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/btn_unlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            app:srcCompat="@drawable/hplib_ic_unlock" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/seekbar_center_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txt_seek_currTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:44"
+            android:textColor="#ffffff"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txt_seek_secs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[ +00:10 ]"
+            android:textColor="#ffffff"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

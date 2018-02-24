@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.SplashActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_import_process"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_account_info"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo_home_new" />
+
+        <ImageView
+            android:id="@+id/iv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/iv_logo"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_rocket"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/iv_divider"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/rokect_image" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_setting_streams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_rocket"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@string/font_family_condensed"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:text="@string/setting_epg_channels_first"
+            android:textColor="@color/light_black"
+            android:textSize="18dp" />
+
+        <com.gehostingv2.gesostingv2iptvbilling.view.utility.LoadingGearSpinner
+            android:id="@+id/iv_gear_loader"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/tv_setting_streams"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/rl_import_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_setting_streams"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_importing_epg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="30dp"
+                android:text="@string/importing_epg"
+                android:fontFamily="@string/font_family_medium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/light_black"
+                android:textSize="18dp" />
+
+            <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:indeterminate="true"
+                android:visibility="visible"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="60dp"
+                app:mpb_progressStyle="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_importing_streams"
+                style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_importing_epg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="32dp"
+                android:progressDrawable="@drawable/greenprogress" />
+
+            <TextView
+                android:id="@+id/tv_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/progressBar"
+                android:layout_marginBottom="42dp"
+                android:layout_marginStart="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_countings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/progressBar"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="30dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp">
+        <TextView
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tv_tip"
+            android:text="@string/tip"
+            android:drawableLeft="@drawable/tip_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:layout_below="@+id/tv_tip"
+            android:id="@+id/iv_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_skip"
+            android:layout_below="@+id/iv_divider1">
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/bt_skip"
+                android:layout_width="250dp"
+                android:focusable="true"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/selector_save_button"
+                android:text="@string/skip_import_epg"
+                android:textColor="@color/black" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/skip_hint"
+                android:layout_below="@+id/bt_skip"
+                android:id="@+id/tv_skip_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eceef2"
+    android:orientation="vertical">
+
+    <!--android:foreground="?android:attr/selectableItemBackground"-->
+    <!--android:background="@drawable/ripple_reply_ticket"-->
+    <!---->
+    <RelativeLayout
+        android:background="@drawable/selector_services_layout"
+        android:focusable="true"
+        android:clickable="true"
+
+        android:id="@+id/rl_reply_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_ticket_client_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_admin_placeholder"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/support_agent" />
+            <ImageView
+                android:id="@+id/iv_client_placeholder"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/user_placeholder" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/rl_ticket_client_staff"
+            android:gravity="left">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/font_family_medium"
+                android:layout_marginTop="8dp"
+                android:text="Amanpreet Singh"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@string/font_family_regular"
+                android:layout_marginRight="65dp"
+                android:text="ter took a galley of type and sfsd scr"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_message"
+                android:layout_marginRight="15dp"
+                android:text="2017--04-25 13:09:23"
+                android:fontFamily="@string/font_family_regular"
+                android:paddingBottom="3dp"
+                android:textColor="@color/view_ticket_request"
+                android:textSize="10dp" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/rl_message"
+            android:background="@drawable/divider" />
+    </RelativeLayout>
+</LinearLayout>
+
+
+    <!--<RelativeLayoutandroid:id="@+id/rl_view_outer"android:layout_width="wrap_content"android:layout_height="wrap_content"&gt;<RelativeLayoutandroid:id="@+id/rl_client"android:layout_width="match_parent"android:layout_height="wrap_content"android:paddingLeft="10dp"android:layout_marginRight="60dp"android:background="@drawable/chat_bubble"&gt;<TextViewandroid:paddingTop="10dp"android:id="@+id/tv_client"android:layout_width="wrap_content"android:textSize="14dp"android:paddingRight="10dp"android:fontFamily="@string/font_family_medium"android:textColor="@color/view_ticket_request"android:layout_height="wrap_content"/><TextViewandroid:id="@+id/tv_client_message"android:layout_below="@+id/tv_client"android:textSize="12dp"android:fontFamily="@string/font_family_regular"android:paddingRight="10dp"android:textColor="@color/view_ticket_request"android:layout_width="wrap_content"android:layout_height="wrap_content"/><TextViewandroid:id="@+id/tv_client_date"android:layout_below="@+id/tv_client_message"android:layout_width="wrap_content"android:layout_height="wrap_content"android:textSize="11dp"android:fontFamily="@string/font_family_regular"android:textColor="@color/view_ticket_request"android:layout_alignParentEnd="true"android:layout_alignParentRight="true"android:layout_marginRight="5dp"android:paddingRight="10dp"android:layout_marginBottom="10dp"/></RelativeLayout><RelativeLayoutandroid:id="@+id/rl_admin_reply"android:layout_width="match_parent"android:layout_height="wrap_content"android:paddingLeft="10dp"android:layout_marginRight="50dp"android:background="@drawable/chat_bubble"&gt;<TextViewandroid:paddingTop="10dp"android:paddingRight="10dp"android:id="@+id/tv_admin"android:layout_width="wrap_content"android:textSize="14dp"android:fontFamily="@string/font_family_medium"android:textColor="@color/view_ticket_request"android:layout_height="wrap_content"/><TextViewandroid:paddingRight="10dp"android:id="@+id/tv_admin_message"android:layout_below="@+id/tv_admin"android:textSize="12dp"android:fontFamily="@string/font_family_regular"android:textColor="@color/view_ticket_request"android:layout_width="wrap_content"android:layout_height="wrap_content"/><TextViewandroid:paddingRight="10dp"android:id="@+id/tv_admin_date"android:layout_below="@+id/tv_admin_message"android:layout_width="wrap_content"android:layout_height="wrap_content"android:textSize="11dp"android:fontFamily="@string/font_family_regular"android:textColor="@color/view_ticket_request"android:layout_alignParentEnd="true"android:layout_alignParentRight="true"android:layout_marginRight="5dp"android:layout_marginBottom="10dp"/></RelativeLayout>-->
+
+    <!--<ImageViewandroid:layout_alignParentEnd="true"android:layout_alignParentRight="true"android:layout_marginRight="10dp"android:id="@+id/iv_admin_placeholder"android:layout_width="40dp"android:layout_height="40dp"android:visibility="gone"android:layout_below="@+id/rl_admin_reply"android:src="@drawable/staff_placeholder"/><ImageViewandroid:layout_alignParentEnd="true"android:layout_alignParentRight="true"android:layout_marginRight="20dp"android:id="@+id/iv_client_placeholder"android:layout_width="40dp"android:layout_height="40dp"android:layout_below="@+id/rl_client"android:src="@drawable/user_placeholder"/></RelativeLayout>-->
+
+
+

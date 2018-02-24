@@ -1,0 +1,125 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_tickets_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.TicketsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_my_support_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:background="@color/tabslidecolor"
+                android:id="@+id/rl_support_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small" />
+
+            <ImageView
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/backspress" />
+
+            <TextView
+                android:id="@+id/tv_my_support_tickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/my_support_tickets"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/view_line_my_support_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/tv_my_support_tickets"
+                android:background="@drawable/line_light_gray_small" />
+                </RelativeLayout>>
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_my_support_ticket"
+            android:layout_marginBottom="10dp"
+            android:background="#f4f4f6"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:layout_marginTop="60dp"
+            android:textSize="30dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@string/font_family_thin"
+            android:id="@+id/tv_no_support_ticket_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_my_support_ticket"
+            android:text="@string/no_support_ticket"
+            android:visibility="gone" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_alignParentBottom="true"
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="28dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/fab_icon"
+            fab:fab_colorNormal="@color/tabslidecolor"
+            fab:fab_colorPressed="@color/light_gray"
+            fab:fab_colorRipple="@color/light_black"/>
+
+        <RelativeLayout
+            android:id="@+id/loadingPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_my_support_ticket"
+            android:layout_centerHorizontal="true">
+
+            <ProgressBar
+                android:indeterminateTint="@color/tabslidecolor"
+                android:id="@+id/pb_loader"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

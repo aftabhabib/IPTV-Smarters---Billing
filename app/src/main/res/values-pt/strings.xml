@@ -1,0 +1,385 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="credential_detail">Fazer Login</string>
+    <string name="username">Usuario</string>
+    <string name="email">Email</string>
+    <string name="submit">Login</string>
+    <string name="forget_password">Esqueceu sua senha?</string>
+    <string name="password">Senha</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Este módulo está em desenvolvimento</string>
+    <string name="drawer_open">menu_toggle</string>
+    <string name="closeDrawer">fechado</string>
+    <string name="lost_password_reset">Redefinir senha perdida</string>
+    <string name="lost_password_brief">Esqueceu sua senha? Introduza o seu endereço de e-mail abaixo para iniciar o processo de reset</string>
+    <string name="reset_email_address">Introduza o seu endereço de e-mail</string>
+    <string name="wrong_email_message">Nenhuma conta de cliente foi encontrada com o endereço de e-mail que você digitou</string>
+    <string name="success_email_message">Email de validação enviado</string>
+    <string name="rset_password_process_brief">O processo de redefinição de senha foi iniciado. Por favor, verifique o seu e-mail para uma senha e digite-o como abaixo.</string>
+    <string name="reset_passode"></string>
+    <string name="new_password_brief">Por favor, insira a sua nova senha desejada abaixo:</string>
+    <string name="reset_new_password">Nova senha</string>
+    <string name="reset_confirm_new_password">Confirmar senha</string>
+    <string name="tip_for_password">Dicas para boa senha</string>
+    <string name="voip_disccount_message"><b></b></string>
+    <string name="client_name"></string>
+    <string name="client_email"></string>
+    <string name="logout">Sair</string>
+    <string name="tip1">Dicas para boa senha</string>
+    <string name="tip2">Use caracteres superiores e minúsculos. Inclua pelo menos um símbolo (# $ !  etc) </string>
+    <string name="tip3">Não use palavras de dicionário</string>
+    <string name="my_support_tickets">Meus tickets de suporte</string>
+    <string name="view_request">Ver pedido</string>
+    <string name="srch">Pesquisar o meu ticket de suporte</string>
+    <string name="search_reply">Resposta do ticket de pesquisa</string>
+    <string name="my_services">Meus serviços</string>
+    <string name="manage_products">Gerenciar produtos</string>
+    <string name="manage_product_alert_message">Há um pedido de cancelamento pendente para este serviço/produto</string>
+    <string name="my_invoices">Minhas faturas</string>
+    <string name="my_domains">Meus domínios</string>
+    <string name="manage_domains">Gerenciar domínios</string>
+    <string name="open_ticket">Ticket aberto</string>
+    <string name="open_ticket_brief">Se você não pode encontrar uma solução para seus problemas em nossa base de conhecimento, você pode enviar um ticket, selecionando o departamento apropriado abaixo.</string>
+    <string name="invoices_detail_heading">FACTURA</string>
+    <string name="manage_servers">ALTERAR NAMESERVERS</string>
+    <string name="my_contacts">Meus contatos</string>
+    <string name="voip_detail">Detalhe de VoIP</string>
+    <string name="product_detatil">Detalhe do produto</string>
+    <string name="voip_detatil">Detalhes VoIP</string>
+    <string name="add_funds">Adicionar fundos</string>
+    <string name="mandate_info">*Todos os fundos de depósito não são reembolsáveis.</string>
+    <string name="group_products">PRODUTOS</string>
+    <string name="product_groups">GRUPOS</string>
+    <string name="view_cart">Itens selecionados do carrinho</string>
+    <string name="client_remaining_credit">Créditos remanescentes</string>
+    <string name="my_credits">Meus créditos</string>
+    <string name="search">Busca</string>
+    <string name="menu_logout">SAIR</string>
+    <string name="live_tv">TV AO VIVO</string>
+    <string name="favourite">FAVORITOS</string>
+    <string name="vod">FILMES</string>
+    <string name="activation_code">Código de ativação</string>
+    <string name="or">Ou</string>
+    <string name="channel_name">Nome do canal</string>
+    <string name="active_channel">Carregando...</string>
+    <string name="view_epg">Ver EPG</string>
+    <string name="add_to_favourite">Adicionar aos favoritos</string>
+    <string name="remove_from_favourite">Remover do favorito</string>
+    <string name="client_username">Nome</string>
+    <string name="no_stream_found">Nenhum canal encontrado</string>
+    <string name="no_record_found">Nenhum registro encontrado</string>
+    <string name="storage_permission_denied">Permissão para acessar o armazenamento foi negado</string>
+    <string name="logging_normal">Normal</string>
+    <string name="logging_verbose">Verbose</string>
+    <string name="error_drm_not_supported">Conteúdo protegido não suportado em níveis de API abaixo de 18</string>
+    <string name="error_drm_unsupported_scheme">Este dispositivo não suporta o esquema de DRM necessário</string>
+    <string name="error_drm_unknown">Ocorreu um erro de DRM desconhecido</string>
+    <string name="error_querying_decoders">Não é possível consultar decodificadores de dispositivo</string>
+    <string name="error_no_decoder">Este dispositivo não fornece um decodificador para<xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_no_secure_decoder">Este dispositivo não fornece um decodificador seguro para<xliff:g id="mime_type">%1$s</xliff:g></string>
+    <string name="error_instantiating_decoder">Não é possível instanciar o decodificador <xliff:g id="decoder_name">%1$s</xliff:g></string>
+    <string name="loading">Carregando...</string>
+    <string name="director">Diretor</string>
+    <string name="release_date">Data de lançamento</string>
+    <string name="rating">Classificação:</string>
+    <string name="off">[off]</string>
+    <string name="no_video_found">Nenhum registro encontrado</string>
+    <string name="no_subscription">Se o seu serviço está desativado ou expirado devido a não-pagamento, login aqui para a sua área de faturamento e pagar a conta para re-ativálo novamente..</string>
+    <string name="no_subscription_">Sem assinatura</string>
+
+
+    <string-array name="priority">
+        <item>Médio</item>
+        <item>Alto</item>
+        <item>Baixo</item>
+    </string-array>
+
+
+    <string name="title_activity_welcome">Tela inicial</string>
+    <string name="next">WHMCS</string>
+    <string name="start">Peguei</string>
+
+    <string name="slide_1_title"></string>
+    <string name="slide_1_desc"></string>
+
+    <string name="slide_2_title"></string>
+    <string name="slide_2_desc"></string>
+
+    <string name="slide_3_title"></string>
+    <string name="slide_3_desc"></string>
+
+    <string name="slide_4_title"></string>
+    <string name="slide_4_desc"></string>
+
+    <string name="play_again_desc">Para ver o slider bem-vindos novamente, ir a configurações-> apps-> bem-vindo Slider->apagar dados</string>
+    <string name="play_again">Jogar novamente</string>
+    <string name="account_info">INFORMAÇÕES DA CONTA</string>
+
+
+    <integer-array name="img_id_arr">
+        <item>@drawable/lb_text_dot_one</item>
+        <item>@drawable/lb_text_dot_one_small</item>
+    </integer-array>
+    <string name="support">SUPORTE</string>
+    <string name="support_label">Suporte:</string>
+    <string name="sales_label">Vendas:</string>
+    <string name="whatsapp_label">WhatsApp:</string>
+
+    <string name="whatsapp_number">+91 7589112968</string>
+    <string name="account_username">Usuario:</string>
+    <string name="account_status">Estado da conta:</string>
+    <string name="account_expiry_date">Expiração:</string>
+    <string name="account_is_trial">Test:</string>
+    <string name="account_active_connections">Conexões ativas:</string>
+    <string name="account_created_at">Criado em:</string>
+    <string name="account_max_connections">Conexões máximas:</string>
+    <string name="whmcs_billing">Login para faturamento</string>
+    <string name="whmcs_iptv">Entre para IPTV</string>
+    <string name="my_billing_services"><![CDATA[Meu faturamento e serviços]]></string>
+    <string name="settings">CONFIGURAÇÕES</string>
+    <string name="select_your_media_player">Selecione seu Mediaplayer</string>
+    <string name="exo_player">Jogador interno (padrão)</string>
+    <string name="mx_player">MX Player</string>
+    <string name="vlc_player">VLC Player </string>
+    <string name="save_changes">Salvar alterações</string>
+    <string name="setting_save">A configuração salva com sucesso!</string>
+    <string name="error_setting_save">Error no salvamento!</string>
+
+    <string name="no_subscription_messag1"> Você não tem nenhum serviço ativo conosco.</string>
+    <string name="no_subscription_messag2"> Seu serviço pode ter suspendido ou desativado devido a não-pagamento</string>
+    <string name="no_subscription_messag3"> Seu serviço pode ter expirado devido a não-pagamento </string>
+    <string name="no_subscription_messag4">Por favor, pague sua fatura-menu-> faturamento-> minha fatura</string>
+    <string name="tv_pay_your_invoice">Faturamento-> minha fatura > ></string>
+    <string name="tv_reasons">Você a sido redirecionado para esta página por causa da razão abaixo:</string>
+    <string name="no_service_purchased">Nenhum serviço comprado</string>
+    <string name="click_to_purchase">Clique aqui para comprar o seu produto</string>
+    <string name="authorization">Autorização</string>
+    <string name="authroiztion_messag1">A autorização não coincide. Contate por favor ao administrador</string>
+    <string name="order_new_services">Carrinho de compras</string>
+    <string name="invoice_detail">Detalhe da factura</string>
+    <string name="no_subscription_error_code">Error code 214 occurs. Por favor contacte o seu administrador.</string>
+    <string name="error_code_210_message">Error code 210 occurs. Contate por favor a seu adminisrator.</string>
+    <string name="error_code_211_message">Error code 211 occur. Por favor contacte o seu administrador.</string>
+
+
+
+    <string name="drawer_home">INICIO</string>
+    <string name="drawer_live_tv">TV AO VIVO</string>
+    <string name="drawer_account_info">INFORMAÇÕES DA CONTA</string>
+    <string name="drawer_vod">FILMES</string>
+    <string name="drawer_settings">CONFIGURAÇÕES</string>
+    <string name="drawer_services">SERVIÇOS</string>
+    <string name="drawer_services_my_services">MEUS SERVIÇOS</string>
+    <string name="drawer_services_order_new_services">NOVO SERVIÇO</string>
+    <string name="drawer_billing">FATURAMENTO</string>
+    <string name="drawer_billing_my_invoices">MINHAS FATURAS</string>
+    <string name="drawer_support">SUPORTE</string>
+    <string name="drawer_support_ticket">BILHETES</string>
+    <string name="drawer_support_open_ticket">CRIAR NOVO TICKET</string>
+
+
+    <string name="menu_home">INICIO</string>
+    <string name="menu_live_tv">TV AO VIVO</string>
+    <string name="menu_favourites">Favourites</string>
+    <string name="menu_vod">FILMES</string>
+    <string name="menu_support">SUPORTE</string>
+    <string name="menu_account_info">INFORMAÇÕES DA CONTA</string>
+    <string name="menu_settings">CONFIGURAÇÕES</string>
+
+
+
+
+
+
+    <string name="services_home">SERVIÇOS</string>
+    <string name="invoices_home">FATURAMENTO</string>
+    <string name="tickets_home">TICKETS</string>
+    <string name="remember_me">Lembre-se de mim</string>
+    <string name="verify_code">VERIFICAR CODIGO</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="submit_">ENVIAR</string>
+    <string name="enter_username_error">Por favor, insira seu nome de usuário</string>
+    <string name="enter_password_error">Por favor, insira sua senha</string>
+    <string name="invalid_activation_code">Código de ativação inválido</string>
+    <string name="invalid_details">Nome de usuário o senha inválido</string>
+    <string name="invalid_status">Sua conta é</string>
+    <string name="enter_valid_email">Introduza por favor o email válido</string>
+    <string name="logged_in">Logado com êxito</string>
+    <string name="logged_out">Logout com êxito</string>
+    <string name="please_wait">Aguarde</string>
+    <string name="no_support_ticket">Nenhum registro de tickets de suporte</string>
+    <string name="fill_info">Por favor preencha as informações abaixo</string>
+    <string name="subject">Assunto</string>
+    <string name="enter_subject">Introduza o seu assunto</string>
+    <string name="dept">Departamento</string>
+    <string name="priority">Prioridade</string>
+    <string name="message">Mensagem</string>
+    <string name="message_hint">Digite sua mensagem aqui</string>
+    <string name="submit_ticket">ENVIAR</string>
+    <string name="close_ticket">FECHAR</string>
+    <string name="no_paid_invoices">Fatura pagas</string>
+    <string name="no_unpaid_invoices">Fatura em aberto</string>
+    <string name="search_paid_invoices">Procurar faturas pagas</string>
+    <string name="search_unpaid_invoices">Procurar faturas em aberto</string>
+    <string name="invoice_no">Fatura#</string>
+    <string name="invoice_date">Data da factura</string>
+    <string name="due_date">Data de vencimento</string>
+    <string name="total">Total</string>
+    <string name="pay_now">PAGAR AGORA</string>
+    <string name="view">VER</string>
+    <string name="search_support_ticket">Pesquisar meus tickets de suporte</string>
+    <string name="loader_submit_ticket">Por favor, aguarde, enquanto o seu pedido está sendo enviado</string>
+    <string name="ticket_submitted">Seu ticket enviado com sucesso</string>
+    <string name="enter_subject_text">Por favor, insira o assunto</string>
+    <string name="enter_message">Por favor, insira a mensagem</string>
+    <string name="view_ticket">VER TICKET</string>
+    <string name="is_close_ticket">Você quer fechar o ticket</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="close_ticket_status">FECHAR TICKET</string>
+    <string name="search_view_ticket_reply">Ticket respondido</string>
+    <string name="reply">Responder</string>
+    <string name="send">ENVIAR</string>
+    <string name="no_active_services">Nenhum serviço ativo</string>
+    <string name="no_cancelled_services">Sem serviços cancelados</string>
+    <string name="no_pending_services">Nenhum serviço pendente</string>
+    <string name="no_suspended_services">Sem serviços suspensos</string>
+    <string name="no_terminated_services">Sem serviços terminados</string>
+
+    <string name="search_services">Pesquisar Serviços</string>
+    <string name="pricing">Preços:</string>
+    <string name="next_due_date">Proxima data de vencimento:</string>
+    <string name="click_to_dashboard">Clique aqui para ir a tela principal</string>
+    <string name="product_detail">Detalhe do produto</string>
+    <string name="product_name">Produto:</string>
+    <string name="status">Estado:</string>
+    <string name="reg_date">Data de inscrição:</string>
+    <string name="recurring_amount">Quantidade recorrente:</string>
+    <string name="billing_cycle">Ciclo de faturamento:</string>
+    <string name="payment_method">Método de pagamento:</string>
+    <string name="first_time_payment">Primer pago:</string>
+    <string name="last_updated">Ultima atualização:</string>
+    <string name="no_fav_vod_found">Nenhum filme favorito encontrado</string>
+    <string name="no_fav_channel_found">Nenhum canal favorito encontrado</string>
+    <string name="search_channel">Canal de pesquisa</string>
+    <string name="no_program_found">Nenhum programa encontrado</string>
+    <string name="search_vod">Procurar VOD</string>
+    <string name="no_epg_found">EPG NÃO ENCONTRADO</string>
+    <string name="all">TODOS OS CANAIS</string>
+    <string name="favourites">FAVORITOS</string>
+
+
+
+    <string name="invoices">FATURAS</string>
+    <string name="services">SERVIÇOS</string>
+    <string name="tickets">DES BILLETS</string>
+
+
+
+
+    <string name="my_service_cancelled">CANCELADO</string>
+    <string name="my_service_active">ATIVO</string>
+    <string name="my_service_pending">PENDENTE</string>
+    <string name="my_service_suspended">SUSPENSO</string>
+    <string name="my_service_terminated">TERMINADO</string>
+    <string name="invoices_paid">PAGO</string>\
+    <string name="invoices_unpaid">NÃO APLICADO</string>
+    <string name="tv_guide">TELEVISÃO AO VIVO COM GUIA</string>
+
+
+    <string name="nav_play">Toque</string>
+    <string name="reoad_data_cat_epg">Atualize o guia Live, Movie e TV</string>
+    <string name="website_label">Local na rede Internet:</string>
+    <string name="player_setting">Seleção do jogador</string>
+    <string name="player_setting_cap">SELEÇÃO DO JOGADOR</string>
+    <string name="parental_contol">Controle dos pais</string>
+    <string name="lock_category">Segurança</string>
+    <string name="update_password">Senha Upadate</string>
+    <string name="old_password">Senha Antiga</string>
+    <string name="new_password">Nova senha</string>
+    <string name="confirm_password">Confirme a Senha</string>
+    <string name="set_parental_password">Definir Senha Parental</string>
+    <string name="please_input_password">Coloque sua senha</string>
+    <string name="bt_submit">SALVE </string>
+    <string name="close">Fechar</string>
+    <string name="parental_contol_setting">Configuração do Controle Parental</string>
+    <string name="setting_epg_channels_first">Aguarde, enquanto estamos preparando as coisas pela primeira vez</string>
+    <string name="control_categories">CATEGORIAS</string>
+    <string name="control_settings">CONFIGURAÇÕES</string>
+    <string name="importing_epg">Guia de TV de importação</string>
+    <string name="refreshing_epg">Guia de TV refrescante</string>
+    <string name="tip">Dica: você pode mudar seu Media Player a qualquer momento da guia \ "setting \"</string>
+    <string name="skip_hint">Ignore-o para executar o processo em segundo plano</string>
+    <string name="menu_live_tv_guide">TELEVISÃO AO VIVO COM GUIA</string>
+    <string name="importing_vod_cat">Carregando categorias VOD</string>
+    <string name="refreshing_vod_cat">Categorias refrescantes de VOD</string>
+    <string name="importign_all_channels">Carregando Canais e VOD</string>
+    <string name="refreshing_all_channels">Canais de atualização e VOD</string>
+    <string name="importing_livestreams_cat">Categorias de canais de carregamento</string>
+    <string name="refreshing_livestreams_cat">Categorias de canais de atualização</string>
+    <string name="skip_import_epg">PULAR</string>
+    <string name="load_channels_vod">Atualizar Canais e VOD</string>
+    <string name="load_tv_guide">Atualizar o Guia de TV</string>
+    <string name="categories">CATEGORIAS</string>
+    <string name="upadating_channels_vod">Updating Channels e VOD, tente depois de algum tempo</string>
+    <string name="view_grid">Grid View</string>
+    <string name="view_Linear">Exibição de lista</string>
+
+    <string name="menu_view_details">Informação do filme</string>
+    <string name="network_error">Dados incorretos. Tentar novamente</string>
+
+    <string name="invalid_request">pedido inválido</string>
+    <string name="sign_up">Inscreva-se pra uma conta</string>
+
+    <string name="confirm_refresh">Confirme para Refrescante ...</string>
+    <string name="proceed">Você quer prosseguir ?</string>
+
+    <string name="logout_successfully">Concluído com sucesso</string>
+
+    <string name="fill_password">Preencha a Senha</string>
+    <string name="fill_confirm_password">Preencha Confirmar Senha</string>
+    <string name="password_not_matched">Senha e confirme a senha não coincidir, tente novamente</string>
+    <string name="invoices_hash">Faturas#</string>
+    <string name="general_enquires">DEPARTAMENTO DE INQUÉRITOS GERAIS</string>
+    <string name="fill_enquiry">Por favor, preencha informações abaixo</string>
+    <string name="support_hash">suporte</string>
+    <string name="drawer_logout">SAIR</string>
+
+    <string name="please_write_your_message">Escreva sua mensagem</string>
+    <string name="ticket_added_succuessfully">Seu ingresso foi adicionado com sucesso</string>
+    <string name="password_mismatch_error">Senha não corresponde</string>
+    <string name="bt_save">ENVIAR</string>
+    <string name="back_button">Costas</string>
+    <string name="use_long_press">Use pressionar para mais opções</string>
+    <string name="setting_etc">Configurações do jogador, Configurações parentais, etc.</string>
+    <string name="stream_format">Formato de fluxo</string>
+    <string name="no_information">Sem informação</string>
+
+    <string name="tv_archive">ARQUIVO DE TV</string>
+    <string name="epg_required_for_archive"> Para TV ARCHIVE, mantenha a EPG atualizada depende dos números de dias da loja do seu provedor </string>
+    <string name="no_archive_found">Nenhum arquivo de TV encontrado</string>
+    <string name="drawer_tv_archieve">Arquivo de TV</string>
+
+
+
+
+    <string name="time_format">Formato de hora</string>
+    <string name="milatary_time">Formato de 24 Horas</string>
+    <string name="normal_time">Formato de 12 Horas</string>
+    <string name="select_your_time_format">Selecione seu formato de hora</string>
+    <string name="tv_guide_channel_update">Configurações da linha de tempo do EPG</string>
+    <string name="channels_with_epg">Mostrar canais apenas com EPG</string>
+    <string name="all_channel">Mostrar todos os canais</string>
+
+
+    <string name="select_your_channel_prefrence">Preferência do Canal</string>
+    <string name="select_your_stream_format">Selecione seu formato de fluxo</string>
+    <string name="invalid_server_response">resposta inválida do servidor </string>
+
+    <string name="no_epg_guide_found">Nenhum EPG encontrado</string>
+
+    <string name="please_wait_invoice">Aguarde enquanto carregamos os resultados para você</string>
+
+
+</resources>

@@ -1,0 +1,234 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.fragment.NoSubscriptionFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f6">
+
+        <RelativeLayout
+            android:id="@+id/rl_open_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tabslidecolor">
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line_light_gray_small"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_back_press"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/backspress" />
+
+            <TextView
+                android:id="@+id/tv_open_ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_line"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@string/font_family_regular"
+                android:text="@string/no_service_purchased"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <View
+                android:id="@+id/v_open_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/tv_open_ticket"
+                android:background="@drawable/line_light_gray_small"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_manage_domain_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_open_ticket"
+            android:layout_margin="20dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_open_ticket_dept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_alert_message_manage_products"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_reasons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/tv_reasons"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_reasons"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="•"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_error_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_reasons"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/no_subscription_error_code"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_error_code"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="•"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_open_ticket_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_error_code"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/no_subscription_messag1"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_open_ticket_brief"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="•"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_open_ticket_brief2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_open_ticket_brief"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/no_subscription_messag2"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_open_ticket_brief2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="•"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_open_ticket_brief3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_open_ticket_brief2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/no_subscription_messag3"
+                    android:textColor="@color/view_ticket_request"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:background="@color/tabslidecolor"
+                    android:id="@+id/tv_purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_open_ticket_brief3"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@string/font_family_regular"
+                    android:text="@string/click_to_purchase"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_manage_domain_header2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cv_manage_domain_header"
+            android:layout_margin="20dp">
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_below="@+id/rl_open_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/loadingPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_open_ticket"
+            android:layout_centerHorizontal="true">
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:indeterminateTint="@color/tabslidecolor"
+                android:id="@+id/pb_loader"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

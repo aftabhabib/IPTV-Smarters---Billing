@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.gehostingv2.gesostingv2iptvbilling.view.activity.DashboardActivity">
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:itemTextColor="@android:color/white"
+        tools:openDrawer="leftt">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <include
+                layout="@layout/app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tabslidecolor">
+
+                <ImageView
+                    android:focusable="true"
+                    android:nextFocusDown="@+id/rl_player"
+                    android:id="@+id/iv_back_press"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/backspress" />
+
+                <TextView
+                    android:id="@+id/tv_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@string/font_family_bold"
+                    android:text="@string/settings"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_setting_parental"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_player"-->
+                    <!--android:focusable="true"-->
+                    <!--android:nextFocusUp="@+id/iv_back_press"-->
+                    <!--android:nextFocusDown="@+id/rl_parental"-->
+                    <!--android:background="@drawable/selector_checkbox"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_player_selection"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_marginRight="20dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:background="@drawable/selector_parental_setting"-->
+                        <!--android:drawableLeft="@drawable/player_selection_icon"-->
+                        <!--android:drawablePadding="30dp"-->
+                        <!--android:fontFamily="@string/font_family_regular"-->
+                        <!--android:text="@string/player_setting"-->
+                        <!--android:textColor="@color/cart_list_item_color"-->
+                        <!--android:textSize="18dp"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_vod_forward_arrow"-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginEnd="20dp"-->
+                        <!--android:layout_marginRight="20dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:src="@drawable/arrow_f" />>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_divider"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1px"-->
+                        <!--android:layout_below="@+id/tv_player_selection"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_marginRight="20dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@color/service_status_terminated" />>-->
+
+
+                <!--</RelativeLayout>>-->
+
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_parental"-->
+                    <!--android:focusable="true"-->
+                    <!--android:nextFocusUp="@+id/rl_player"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_below="@+id/rl_player"-->
+                    <!--android:background="@drawable/selector_checkbox"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_parental_control"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_marginRight="20dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:background="@drawable/selector_parental_setting"-->
+                        <!--android:drawableLeft="@drawable/parental_control_icon"-->
+                        <!--android:drawablePadding="30dp"-->
+                        <!--android:fontFamily="@string/font_family_regular"-->
+                        <!--android:text="@string/parental_contol"-->
+                        <!--android:textColor="@color/cart_list_item_color"-->
+                        <!--android:textSize="18dp"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_vod_forward_arrow2"-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_marginEnd="20dp"-->
+                        <!--android:layout_marginRight="20dp"-->
+                        <!--android:layout_marginTop="13dp"-->
+                        <!--android:src="@drawable/arrow_f" />>-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_divider1"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1px"-->
+                        <!--android:layout_below="@+id/tv_parental_control"-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_marginRight="20dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@color/service_status_terminated" />>-->
+
+                <!--</RelativeLayout>>-->
+
+
+
+                <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/rl_player"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusDown="@+id/rl_parental"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusableInTouchMode="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_checkbox"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_player_selection"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_parental_setting"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawableLeft="@drawable/player_selection_icon"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawablePadding="30dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:fontFamily="@string/font_family_regular"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusDown="@+id/tv_parental_control"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="@string/player_setting"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/cart_list_item_color"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="18dp"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_vod_forward_arrow"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginEnd="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/arrow_f" />>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;</RelativeLayout>>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_divider"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="1px"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/rl_player"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/service_status_terminated" />>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/rl_parental"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusUp="@+id/rl_player"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/iv_divider"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_checkbox"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_parental_control"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_parental_setting"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawableLeft="@drawable/parental_control_icon"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawablePadding="30dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:fontFamily="@string/font_family_regular"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusUp="@+id/tv_player_selection"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="@string/parental_contol"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/cart_list_item_color"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="18dp"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_vod_forward_arrow2"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginEnd="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="13dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/arrow_f" />>&ndash;&gt;-->
+                <!--&lt;!&ndash;</RelativeLayout>>&ndash;&gt;-->
+                <!--&lt;!&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<android.support.v7.widget.CardView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/rl_player"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusDown="@+id/rl_parental"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusableInTouchMode="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_checkbox"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_player_selection"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_parental_setting"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawableLeft="@drawable/player_selection_icon"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawablePadding="30dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:fontFamily="@string/font_family_regular"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusDown="@+id/tv_parental_control"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="@string/player_setting"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/cart_list_item_color"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="18dp"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_vod_forward_arrow"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginEnd="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/arrow_f" />>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;</RelativeLayout>>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_divider"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="1px"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/rl_player"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/service_status_terminated" />>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/rl_parental"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusUp="@+id/rl_player"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/iv_divider"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_checkbox"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_parental_control"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/selector_parental_setting"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawableLeft="@drawable/parental_control_icon"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:drawablePadding="30dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:focusable="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:fontFamily="@string/font_family_regular"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:nextFocusUp="@+id/tv_player_selection"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="@string/parental_contol"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/cart_list_item_color"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="18dp"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_vod_forward_arrow2"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginEnd="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="20dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="13dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/arrow_f" />>&ndash;&gt;-->
+                <!--&lt;!&ndash;</RelativeLayout>>&ndash;&gt;-->
+                <!--&lt;!&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+                <!--&lt;!&ndash;</android.support.v7.widget.CardView>&ndash;&gt;-->
+
+            <!--</RelativeLayout>-->
+            <!--&gt;-->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/rl_setting_parental"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_player"
+                    android:focusable="true"
+                    android:paddingTop="5dp"
+                    android:nextFocusDown="@+id/rl_parental"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_player_selection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/selector_parental_setting"
+                        android:drawableLeft="@drawable/player_selection_icon"
+                        android:drawablePadding="30dp"
+                        android:fontFamily="@string/font_family_regular"
+                        android:text="@string/player_setting"
+                        android:textColor="@color/cart_list_item_color"
+                        android:textSize="18dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_vod_forward_arrow"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/arrow_f" />>
+
+                    <ImageView
+                        android:id="@+id/iv_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_player_selection"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/service_status_terminated" />>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_parental"
+                    android:focusable="true"
+                    android:nextFocusUp="@+id/rl_player"
+                    android:layout_below="@+id/rl_player"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_parental_control"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_parental_setting"
+                        android:drawableLeft="@drawable/parental_control_icon"
+                        android:drawablePadding="30dp"
+                        android:fontFamily="@string/font_family_regular"
+                        android:text="@string/parental_contol"
+                        android:textColor="@color/cart_list_item_color"
+                        android:textSize="18dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_vod_forward_arrow2"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/arrow_f" />>
+
+                    <ImageView
+                        android:id="@+id/iv_divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_parental_control"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/service_status_terminated" />>
+
+                </RelativeLayout>>
+
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/rl_epg_shift"
+                    android:focusable="true"
+                    android:nextFocusUp="@+id/rl_parental"
+                    android:layout_below="@+id/rl_parental"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_epg_time_shift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_parental_setting"
+                        android:drawableLeft="@drawable/epg_control_icon"
+                        android:drawablePadding="30dp"
+                        android:fontFamily="@string/font_family_regular"
+                        android:text="@string/tv_guide_epg_time_shift"
+                        android:textColor="@color/cart_list_item_color"
+                        android:textSize="18dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_epg_forward_arrow2"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/arrow_f" />>
+
+                    <ImageView
+                        android:id="@+id/iv_divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_epg_time_shift"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/service_status_terminated" />>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/rl_stream_format"
+                    android:focusable="true"
+                    android:nextFocusUp="@+id/rl_epg_shift"
+                    android:layout_below="@+id/rl_epg_shift"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_stream_format"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_parental_setting"
+                        android:drawableLeft="@drawable/stream_format"
+                        android:drawablePadding="30dp"
+                        android:fontFamily="@string/font_family_regular"
+                        android:text="@string/stream_format"
+                        android:textColor="@color/cart_list_item_color"
+                        android:textSize="18dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_stream_format_forward_arrow2"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/arrow_f" />
+
+                    <ImageView
+                        android:id="@+id/iv_divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_stream_format"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/service_status_terminated" />>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/rl_time_format"
+                    android:focusable="true"
+                    android:nextFocusUp="@+id/rl_stream_format"
+                    android:layout_below="@+id/rl_stream_format"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_time_format"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_parental_setting"
+                        android:drawableLeft="@drawable/time_24hr"
+                        android:drawablePadding="30dp"
+                        android:fontFamily="@string/font_family_regular"
+                        android:text="@string/time_format"
+                        android:textColor="@color/cart_list_item_color"
+                        android:textSize="18dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_time_format_forward_arrow2"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/arrow_f" />
+
+                    <ImageView
+                        android:id="@+id/iv_divider4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_time_format"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/service_status_terminated" />>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/rl_epg_channel_update"
+                    android:focusable="true"
+                    android:nextFocusUp="@+id/rl_time_format"
+                    android:layout_below="@+id/rl_time_format"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_epg_channel_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_parental_setting"
+                        android:drawableLeft="@drawable/live_tv_guide_setting"
+                        android:drawablePadding="30dp"
+                        android:fontFamily="@string/font_family_regular"
+                        android:text="@string/tv_guide_channel_update"
+                        android:textColor="@color/cart_list_item_color"
+                        android:textSize="18dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_epg_channel_update_forward_arrow2"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/arrow_f" />
+
+                    <ImageView
+                        android:id="@+id/iv_divider5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_epg_channel_update"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/service_status_terminated" />>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/rl_live_vod_layout"
+                    android:focusable="true"
+                    android:nextFocusUp="@+id/rl_epg_channel_update"
+                    android:layout_below="@+id/rl_epg_channel_update"
+                    android:paddingTop="5dp"
+                    android:background="@drawable/selector_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_live_vod_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_parental_setting"
+                        android:drawableLeft="@drawable/layout_select"
+                        android:drawablePadding="30dp"
+                        android:fontFamily="@string/font_family_regular"
+                        android:text="@string/layout_selection"
+                        android:textColor="@color/cart_list_item_color"
+                        android:textSize="18dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_live_vod_layout_forward_arrow2"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/arrow_f" />
+
+                    <ImageView
+                        android:id="@+id/iv_divider6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_live_vod_layout"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/service_status_terminated" />>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_back_settings"
+                    android:focusable="true"
+                    android:layout_below="@+id/rl_live_vod_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@drawable/selector_save_color"
+                    android:background="@drawable/selector_save_button"
+                    android:text="@string/back_button" />
+
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_back_settings"-->
+                    <!--android:focusable="true"-->
+                    <!--android:layout_below="@+id/rl_stream_format"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:textColor="@drawable/selector_save_color"-->
+                    <!--android:background="@drawable/selector_save_button"-->
+                    <!--android:text="@string/back_button" />-->
+
+
+
+            </RelativeLayout>
+            </ScrollView>>
+
+
+            <include
+                layout="@layout/app_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.design.widget.NavigationView
+
+            android:id="@+id/nav_view"
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+            app:headerLayout="@layout/nav_header"
+            app:itemIconTint="@color/white">
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation_drawer_bottom"
+                android:visibility="gone"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_black"
+                android:fitsSystemWindows="true"
+                app:headerLayout="@layout/nav_footer" />
+
+            <ExpandableListView
+                android:id="@+id/navigationmenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="200.3dp"
+                android:background="@color/light_black"
+                app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null"
+                android:paddingTop="5dp" />
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
+
+
+    <!--<RelativeLayout-->
+
+    <!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:background="@color/light_gray">-->
+
+    <!--<android.support.v7.widget.CardView--><!--android:layout_width="match_parent"--><!--android:layout_margin="10dp"--><!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+
+    <!--<RelativeLayout--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content">-->
+
+
+    <!--<TextView--><!--android:background="@color/black"--><!--android:id="@+id/tv_media_player_heading"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_centerHorizontal="true"--><!--android:textStyle="bold"--><!--android:padding="10dp"--><!--android:gravity="center_horizontal"--><!--android:fontFamily="@string/font_family_bold"--><!--android:text="@string/select_your_media_player"--><!--android:textColor="@color/white"--><!--android:textSize="16dp" />--><!--<RadioGroup--><!--android:layout_below="@+id/tv_media_player_heading"--><!--android:id="@+id/rg_radio"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content" >--><!--<RadioButton--><!--android:layout_marginTop="20dp"--><!--android:buttonTint="@color/tabslidecolor"--><!--android:id="@+id/rb_vlc_player"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="@string/vlc_player"--><!--android:padding="10dp"--><!--android:textSize="18dp"--><!--android:layout_marginLeft="25dp"--><!--/>--><!--<RadioButton--><!--android:buttonTint="@color/tabslidecolor"--><!--android:id="@+id/rb_exo_player"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:text="@string/exo_player"--><!--android:textSize="18dp"--><!--android:padding="10dp"--><!--android:layout_marginLeft="25dp"--><!--/>-->
+
+    <!--<RadioButton-->
+
+    <!--android:buttonTint="@color/tabslidecolor"--><!--android:id="@+id/rb_mx_player"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/rb_exo_player"--><!--android:padding="10dp"--><!--android:textSize="18dp"--><!--android:text="@string/mx_player"--><!--android:layout_marginLeft="25dp"--><!--/>-->
+
+    <!--</RadioGroup>--><!--<RelativeLayout--><!--android:layout_below="@id/rg_radio"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">--><!--<Button--><!--android:id="@+id/bt_save_changes"--><!--android:focusable="true"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:layout_marginBottom="20dp"--><!--android:textColor="@drawable/selector_save_color"--><!--android:padding="10dp"--><!--android:background="@drawable/selector_save_button"--><!--android:text="@string/save_changes" />--><!--</RelativeLayout>--><!--</RelativeLayout--><!--&gt;--><!--</LinearLayout>--><!--</android.support.v7.widget.CardView>-->
+
+    <!--</RelativeLayout>-->

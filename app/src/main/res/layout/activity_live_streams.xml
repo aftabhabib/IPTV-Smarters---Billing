@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="left">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <include
+                layout="@layout/app_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/tv_divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/appbar_toolbar"
+                android:background="@color/colorPrimaryFocus" />
+
+
+            <RelativeLayout
+                android:layout_below="@+id/appbar_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/sliding_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tabslidecolor"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/white"
+                    app:tabBackground="@drawable/tab_color_selector"
+                    />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/sliding_tabs"
+                    android:layout_weight="1"
+                    android:background="@color/dark_gray" />
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/pb_loader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sliding_tabs"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:indeterminate="true" />
+            </RelativeLayout>
+
+            <include
+                layout="@layout/app_bar_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+            app:headerLayout="@layout/nav_header"
+            app:itemIconTint="@color/white">
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigation_drawer_bottom"
+                android:visibility="gone"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_black"
+                android:fitsSystemWindows="true"
+                app:headerLayout="@layout/nav_footer" />
+
+            <ExpandableListView
+                android:id="@+id/navigationmenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="200.3dp"
+                android:background="@color/light_black"
+                app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null"
+                android:paddingTop="5dp" />
+        </android.support.design.widget.NavigationView>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</LinearLayout>
+
