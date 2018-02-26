@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.gehostingv2.gesostingv2iptvbilling.R;
 import com.gehostingv2.gesostingv2iptvbilling.miscelleneious.common.AppConst;
+import com.gehostingv2.gesostingv2iptvbilling.model.database.DatabaseHandler;
 import com.gehostingv2.gesostingv2iptvbilling.model.database.LiveStreamCategoryIdDBModel;
 import com.gehostingv2.gesostingv2iptvbilling.model.database.LiveStreamDBHandler;
 import com.gehostingv2.gesostingv2iptvbilling.view.activity.VoDListViewCatActivity;
@@ -41,6 +42,7 @@ public class VodAdapterNewFlow extends RecyclerView.Adapter<VodAdapterNewFlow.My
     private List<LiveStreamCategoryIdDBModel> completeList;
     public int text_last_size;
     public int text_size;
+    private DatabaseHandler dbHandeler;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -75,6 +77,7 @@ public class VodAdapterNewFlow extends RecyclerView.Adapter<VodAdapterNewFlow.My
         this.moviesListl= movieList;
         this.context = context;
         this.liveStreamDBHandler = new LiveStreamDBHandler(context);
+        this.dbHandeler = new DatabaseHandler(context);
     }
 
     public VodAdapterNewFlow(){
@@ -133,6 +136,22 @@ public class VodAdapterNewFlow extends RecyclerView.Adapter<VodAdapterNewFlow.My
             holder.tvXubCount.setText(String.valueOf(count));
         else
             holder.tvXubCount.setText("");
+
+        if(listPosition==0 && data.getLiveStreamCategoryID().equals("0")){
+            int countAll = liveStreamDBHandler.getStreamsCount("movie");
+            if (countAll != 0 && countAll != -1)
+                holder.tvXubCount.setText(String.valueOf(countAll));
+            else
+                holder.tvXubCount.setText("");
+        }
+
+        if(listPosition==1 && data.getLiveStreamCategoryID().equals("-1")){
+            int countAll = dbHandeler.getFavouriteCount("vod");
+            if (countAll != 0 && countAll != -1)
+                holder.tvXubCount.setText(String.valueOf(countAll));
+            else
+                holder.tvXubCount.setText("0");
+        }
 
 
         holder.rlListOfCategories.setOnClickListener(new View.OnClickListener() {
@@ -216,6 +235,7 @@ public class VodAdapterNewFlow extends RecyclerView.Adapter<VodAdapterNewFlow.My
                         }
                         if (moviesListl!=null && moviesListl.size() == 0) {
                             tvNoRecordFound.setVisibility(View.VISIBLE);
+                            tvNoRecordFound.setText(context.getResources().getString(R.string.no_record_found));
                         }
                         text_last_size = text_size;
                         notifyDataSetChanged();

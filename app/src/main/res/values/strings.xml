@@ -439,13 +439,10 @@
     <string name="setting_etc">Player Settings, Parental Settings etc.</string>
     <string name="stream_format">Stream Format</string>
     <string name="no_information">No Information</string>
-
     <string name="tv_archive">TV ARCHIVE</string>
     <string name="epg_required_for_archive">For TV ARCHIVE, please keep EPG up to date depends on numbers of days your provider store</string>
     <string name="no_archive_found">No TV Archive Found</string>
     <string name="drawer_tv_archieve">TV ARCHIVE</string>
-
-
     <string name="time_format">Time Format</string>
     <string name="milatary_time">24 Hours Format</string>
     <string name="normal_time">12 Hours Format</string>
@@ -455,8 +452,6 @@
     <string name="all_channel">Show All Channels</string>
     <string name="select_your_channel_prefrence">Channel Preference</string>
     <string name="invalid_server_response">Invalid Server Response</string>
-
-
     <string name="sort_default">Default</string>
     <string name="sort_last_added">Top Added</string>
     <string name="sort_atoz">A-Z</string>
@@ -464,11 +459,6 @@
     <string name="layout_style_list">LIST STYLE</string>
     <string name="layout_style_tab">TAB STYLE</string>
     <string name="layout_selection">Layout Selection</string>
-
     <string name="no_epg_guide_found">No EPG Found</string>
-
     <string name="please_wait_invoice">Please wait while we loading results for you</string>
-
-
-
 </resources>

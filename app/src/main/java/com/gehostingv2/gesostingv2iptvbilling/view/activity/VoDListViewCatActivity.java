@@ -1120,7 +1120,7 @@ public class VoDListViewCatActivity extends AppCompatActivity implements VodInte
 
 
         if (isSubcaetgroyAvail) {
-            toolbar.inflateMenu(R.menu.menu_search); //
+            toolbar.inflateMenu(R.menu.menu_search_refresh_live_vod_tvguide); //menu_search
         } else {
             toolbar.inflateMenu(R.menu.menu_search_text_icon); //
         }
@@ -1144,7 +1144,7 @@ public class VoDListViewCatActivity extends AppCompatActivity implements VodInte
     public boolean onPrepareOptionsMenu(Menu menu) {
         menu.clear();
         if (isSubcaetgroyAvail) {
-            toolbar.inflateMenu(R.menu.menu_text_icon); //
+            toolbar.inflateMenu(R.menu.menu_search_refresh_live_vod_tvguide); //
             return true;
         } else {
             toolbar.inflateMenu(R.menu.menu_search_text_icon); //

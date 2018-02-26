@@ -3,6 +3,7 @@ package com.gehostingv2.gesostingv2iptvbilling.view.activity;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -15,17 +16,22 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ActionMenuView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -207,6 +213,7 @@ public class LiveTVListViewActivity extends AppCompatActivity implements LiveStr
 
     private GridLayoutManager gridLayoutManager;
     LiveAdapterNewFlow adapter;
+    SearchView searchView;
 
 
     @Override
@@ -493,7 +500,7 @@ public class LiveTVListViewActivity extends AppCompatActivity implements LiveStr
         }
         FragmentTransaction ft = fragmentManager.beginTransaction();
 
-        Utils.startActivityOtherDash(context,selectedItem);
+        Utils.startActivityOtherDash(context, selectedItem);
 
 //        if (selectedItem.equals(getResources().getString(R.string.drawer_home))) {
 //            Intent dashboardActivtyIntent = new Intent(this, DashboardActivity.class);
@@ -688,7 +695,6 @@ public class LiveTVListViewActivity extends AppCompatActivity implements LiveStr
         listDataChild.put(listDataHeader.get(9), supportList);
 
 
-
     }
 
     private void toolbarSet() {
@@ -699,6 +705,44 @@ public class LiveTVListViewActivity extends AppCompatActivity implements LiveStr
     }
 
 
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        super.onCreateOptionsMenu(menu);
+//        menu.clear();
+//
+//
+///**
+// * commented code used here to can be used if have use default menu
+// * inflater
+// */
+///**
+// * This code used here to put menu item in center vertical using instanceof Action menu
+// * view inflating menu view using toolbar
+// */
+//
+//
+//        toolbar.inflateMenu(R.menu.menu_search_refresh_live_vod_tvguide);
+//        TypedValue tv = new TypedValue();
+//        if (this.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+//            int actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, this.getResources().getDisplayMetrics());
+//        }
+//
+//        for (int i = 0; i < toolbar.getChildCount(); i++) {
+//            // make toggle drawable center-vertical, you can make each view alignment whatever you want
+//            if (toolbar.getChildAt(i) instanceof ActionMenuView) {
+//                Toolbar.LayoutParams lp = (Toolbar.LayoutParams) toolbar.getChildAt(i).getLayoutParams();
+//                lp.gravity = Gravity.CENTER_VERTICAL;
+//            }
+//        }
+//        return true;
+//    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.clear();
+        toolbar.inflateMenu(R.menu.menu_search_refresh_live_vod_tvguide);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -715,14 +759,174 @@ public class LiveTVListViewActivity extends AppCompatActivity implements LiveStr
                 }
                 return super.onOptionsItemSelected(item);
             case R.id.action_search:
-                // Not implemented here
-                return false;
+                searchView = (SearchView) MenuItemCompat.getActionView(item);
+                searchView.setQueryHint(getResources().getString(R.string.search_categories));
+                searchView.setIconifiedByDefault(false);
+                searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        //filters list items from adapter
+                        tvNoRecordFound.setVisibility(View.GONE);
+                        if (adapter != null) {
+                            if (tvNoStream != null) {
+                                if (tvNoStream.getVisibility() != View.VISIBLE) {
+                                    adapter.filter(newText, tvNoRecordFound);
+                                }
+                            }
+                        }
+                        return false;
+                    }
+                });
+                return true;
+            case R.id.menu_load_channels_vod1:
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(LiveTVListViewActivity.this);
+                // Setting Dialog Title
+                alertDialog.setTitle(getResources().getString(R.string.confirm_refresh));
+                // Setting Dialog Message
+                alertDialog.setMessage(getResources().getString(R.string.proceed));
+                // Setting Icon to Dialog
+                alertDialog.setIcon(R.drawable.questionmark);
+                // Setting Positive "Yes" Button
+                alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        // Write your code here to invoke YES event
+                        loadChannelsAndVod();
+                    }
+                });
+
+                // Setting Negative "NO" Button
+                alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to invoke NO event
+                        dialog.cancel();
+                    }
+                });
+                // Showing Alert Message
+                alertDialog.show();
+                break;
+
+            case R.id.menu_load_tv_guide1:
+                AlertDialog.Builder alertDialog1 = new AlertDialog.Builder(LiveTVListViewActivity.this);
+                // Setting Dialog Title
+                alertDialog1.setTitle(getResources().getString(R.string.confirm_refresh));
+                // Setting Dialog Message
+                alertDialog1.setMessage(getResources().getString(R.string.proceed));
+                // Setting Icon to Dialog
+                alertDialog1.setIcon(R.drawable.questionmark);
+                // Setting Positive "Yes" Button
+                alertDialog1.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        // Write your code here to invoke YES event
+                        loadTvGuid();
+                    }
+                });
+
+                // Setting Negative "NO" Button
+                alertDialog1.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to invoke NO event
+                        dialog.cancel();
+                    }
+                });
+                // Showing Alert Message
+                alertDialog1.show();
+                break;
+
             default:
                 break;
 
         }
         return false;
     }
+
+
+    private void loadChannelsAndVod() {
+        if (context != null) {
+            boolean isChannelVODUpdating = false;
+            isChannelVODUpdating = getChannelVODUpdateStatus();
+            if (isChannelVODUpdating) {
+                LiveStreamDBHandler liveStreamDBHandler = new LiveStreamDBHandler(context);
+                liveStreamDBHandler.makeEmptyAllChannelsVODTablesRecords();
+                Intent intentLoadingApiActivity = new Intent(context, ImportStreamsActivity.class);
+                startActivity(intentLoadingApiActivity);
+            } else {
+                if (context != null)
+                    Utils.showToast(context, getResources().getString(R.string.upadating_channels_vod));
+            }
+        }
+    }
+
+    private boolean getChannelVODUpdateStatus() {
+//        if (liveStreamDBHandler != null &&
+//                databaseUpdatedStatusDBModelLive != null) {
+//            databaseUpdatedStatusDBModelLive =
+//                    liveStreamDBHandler.getdateDBStatus(AppConst.DB_CHANNELS, AppConst.DB_CHANNELS_ID);
+//            if (databaseUpdatedStatusDBModelLive != null) {
+//                if (databaseUpdatedStatusDBModelLive.getDbUpadatedStatusState() == null) {
+//                    return true;
+//                } else {
+//                    return databaseUpdatedStatusDBModelLive.getDbUpadatedStatusState().equals(AppConst.DB_UPDATED_STATUS_FINISH)
+//                            || databaseUpdatedStatusDBModelLive.getDbUpadatedStatusState().equals(AppConst.DB_UPDATED_STATUS_FAILED);
+//                }
+//            }
+//        }
+        return true;
+    }
+
+
+    private void loadTvGuid() {
+        if (context != null) {
+            boolean isChannelEPGUpdating = false;
+            isChannelEPGUpdating = getEPGUpdateStatus();
+            if (isChannelEPGUpdating) {
+                SharedPreferences loginPreferencesAfterLogin;
+                SharedPreferences.Editor loginPrefsEditor;
+                loginPreferencesAfterLogin = context.getSharedPreferences(AppConst.LOGIN_SHARED_PREFERENCE_IPTV, MODE_PRIVATE);
+                loginPrefsEditor = loginPreferencesAfterLogin.edit();
+                if (loginPrefsEditor != null) {
+                    loginPrefsEditor.putString(AppConst.SKIP_BUTTON_PREF, "autoLoad");
+                    loginPrefsEditor.commit();
+                    String skipButton = loginPreferencesAfterLogin.getString(AppConst.SKIP_BUTTON_PREF, "");
+                    LiveStreamDBHandler liveStreamDBHandler = new LiveStreamDBHandler(context);
+                    liveStreamDBHandler.makeEmptyEPG();
+                    Intent intentLoadingApiActivity = new Intent(context, ImportEPGActivity.class);
+                    startActivity(intentLoadingApiActivity);
+                }
+            } else {
+                if (context != null)
+                    Utils.showToast(context, getResources().getString(R.string.upadating_tv_guide));
+            }
+        }
+    }
+
+
+    private boolean getEPGUpdateStatus() {
+//        if (liveStreamDBHandler != null &&
+//                databaseUpdatedStatusDBModelEPG != null
+//                ) {
+//            databaseUpdatedStatusDBModelEPG =
+//                    liveStreamDBHandler.getdateDBStatus(AppConst.DB_EPG, AppConst.DB_EPG_ID);
+//            if (databaseUpdatedStatusDBModelEPG != null) {
+//                if (databaseUpdatedStatusDBModelEPG.getDbUpadatedStatusState() == null || databaseUpdatedStatusDBModelEPG.getDbUpadatedStatusState().equals(AppConst.DB_UPDATED_STATUS_FINISH)
+//                        || databaseUpdatedStatusDBModelEPG.getDbUpadatedStatusState().equals(AppConst.DB_UPDATED_STATUS_FAILED)) {
+//                    return true;
+//                } else {
+//                    return (databaseUpdatedStatusDBModelEPG.getDbUpadatedStatusState() == null ||
+//                            databaseUpdatedStatusDBModelEPG.getDbUpadatedStatusState().equals(""));
+//                }
+//            }
+//        }
+        return true;
+    }
+
+
 
     private void setToggleIconPosition() {
         tv = new TypedValue();
@@ -842,13 +1046,13 @@ public class LiveTVListViewActivity extends AppCompatActivity implements LiveStr
 
     public void onResume() {
         super.onResume();
-        if (adapter != null)
+        if (adapter != null) {
             adapter.setVisibiltygone(pbPagingLoader1);
+            adapter.notifyDataSetChanged();
+        }
         setDrawerToggle();
 
     }
-
-
 
 
     private void headerView() {

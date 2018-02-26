@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/search_view"
+        android:title="@string/search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/empty"
+        android:title="inner"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@drawable/menu_dots">
+        <menu>
+            <!--<item-->
+                <!--android:id="@+id/action_logout1"-->
+                <!--android:orderInCategory="100"-->
+                <!--android:icon="@drawable/logout_icon_menu"-->
+                <!--android:title="@string/menu_logout"-->
+                <!--/>-->
+            <item
+                android:icon="@drawable/livetv_icon_menu"
+                android:id="@+id/menu_load_channels_vod1"
+                android:title="@string/load_channels_vod" />
+            <item
+
+                android:icon="@drawable/guide_icon_menu"
+                android:id="@+id/menu_load_tv_guide1"
+                android:title="@string/load_tv_guide" />
+        </menu>
+    </item>
+</menu>

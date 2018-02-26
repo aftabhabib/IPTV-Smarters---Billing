@@ -5,6 +5,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabaseLockedException;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
@@ -139,6 +141,24 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         cursor.close();
         // return favourite list
         return favouriteList;
+    }
+
+    public int getFavouriteCount(String type) {  // String categoryId
+        String selectQuery = "SELECT  COUNT(*) FROM " + TABLE_IPTV_FAVOURITES + " WHERE " + KEY_TYPE + "='" + type + "'";
+        SQLiteDatabase getAvailableChannelsCountDB;
+        try {
+            getAvailableChannelsCountDB = this.getReadableDatabase();
+            Cursor cursor = getAvailableChannelsCountDB.rawQuery(selectQuery, null);
+            cursor.moveToFirst();
+            int count = cursor.getInt(0);
+            cursor.close();
+            return count;
+        } catch (SQLiteDatabaseLockedException e) {
+            return 0;
+        }catch (SQLiteException e) {
+            return 0;
+        }
+
     }
 
 }

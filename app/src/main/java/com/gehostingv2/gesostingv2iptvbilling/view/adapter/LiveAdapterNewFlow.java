@@ -19,7 +19,9 @@ import android.widget.TextView;
 
 import com.gehostingv2.gesostingv2iptvbilling.R;
 import com.gehostingv2.gesostingv2iptvbilling.miscelleneious.common.AppConst;
+import com.gehostingv2.gesostingv2iptvbilling.model.database.DatabaseHandler;
 import com.gehostingv2.gesostingv2iptvbilling.model.database.LiveStreamCategoryIdDBModel;
+import com.gehostingv2.gesostingv2iptvbilling.model.database.LiveStreamDBHandler;
 import com.gehostingv2.gesostingv2iptvbilling.view.activity.LiveTVListViewActivity;
 import com.gehostingv2.gesostingv2iptvbilling.view.activity.LiveTVListViewCatActivity;
 
@@ -39,6 +41,8 @@ public class LiveAdapterNewFlow extends RecyclerView.Adapter<LiveAdapterNewFlow.
     private int text_last_size;
     private int text_size;
     private int adapterPosition;
+    private LiveStreamDBHandler liveStreamDBHandler;
+    private DatabaseHandler dbHandeler;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -52,6 +56,9 @@ public class LiveAdapterNewFlow extends RecyclerView.Adapter<LiveAdapterNewFlow.
         RelativeLayout rlListOfCategories;
         @BindView(R.id.testing)
         RelativeLayout testing;
+
+        @BindView(R.id.tv_sub_cat_count)
+        TextView tvXubCount;
 
 
         public MyViewHolder(View itemView) {
@@ -68,7 +75,8 @@ public class LiveAdapterNewFlow extends RecyclerView.Adapter<LiveAdapterNewFlow.
 
         this.moviesListl= movieList;
         this.context = context;
-//        this.adapterPosition = 0;
+        this.liveStreamDBHandler = new LiveStreamDBHandler(context);
+        this.dbHandeler = new DatabaseHandler(context);
     }
 
     @Override
@@ -118,11 +126,26 @@ public class LiveAdapterNewFlow extends RecyclerView.Adapter<LiveAdapterNewFlow.
 
         final String finalCategoryId = categoryId;
         final String finalCategoryName = categoryName;
+        int count = liveStreamDBHandler.getSubCatMovieCount(data.getLiveStreamCategoryID(), "live");
+        if (count != 0 && count != -1)
+            holder.tvXubCount.setText(String.valueOf(count));
+        else
+            holder.tvXubCount.setText("");
 
-//                if(listPosition == adapterPosition) {
-//                    holder.testing.setPadding(10, 10, 10, 10);
-//                }
-
+        if(listPosition==0 && data.getLiveStreamCategoryID().equals("0")){
+            int countAll = liveStreamDBHandler.getStreamsCount("live");
+            if (countAll != 0 && countAll != -1)
+                holder.tvXubCount.setText(String.valueOf(countAll));
+            else
+                holder.tvXubCount.setText("");
+        }
+        if(listPosition==1 && data.getLiveStreamCategoryID().equals("-1")){
+            int countAll = dbHandeler.getFavouriteCount("live");
+            if (countAll != 0 && countAll != -1)
+                holder.tvXubCount.setText(String.valueOf(countAll));
+            else
+                holder.tvXubCount.setText("0");
+        }
 
         holder.rlOuter.setOnClickListener(new View.OnClickListener() {
 
