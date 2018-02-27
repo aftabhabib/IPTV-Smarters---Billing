@@ -423,15 +423,24 @@ public class Utils {
                 context.startActivity(MxPlayerIntent);
             } else {
                 Intent NSTPlayerIntent = new Intent(context, NSTPlayerVodActivity.class);
-                NSTPlayerIntent.putExtra("OPENED_STREAM_ID", streamId);
-                NSTPlayerIntent.putExtra("STREAM_TYPE", streamType);
-                int index = 0;
-                if (num != null)
-                    index = Integer.parseInt(num.trim());
-                NSTPlayerIntent.putExtra("VIDEO_NUM", index);
-                NSTPlayerIntent.putExtra("VIDEO_TITLE", name);
 
+                NSTPlayerIntent.putExtra("VIDEO_ID", streamId);
+                NSTPlayerIntent.putExtra("VIDEO_TITLE", name);
+                NSTPlayerIntent.putExtra("EXTENSION_TYPE", containerExtension);
+                int index = Integer.parseInt(num);
+                NSTPlayerIntent.putExtra("VIDEO_NUM", index);
                 context.startActivity(NSTPlayerIntent);
+
+
+//                NSTPlayerIntent.putExtra("OPENED_STREAM_ID", streamId);
+//                NSTPlayerIntent.putExtra("STREAM_TYPE", streamType);
+//                int index = 0;
+//                if (num != null)
+//                    index = Integer.parseInt(num.trim());
+//                NSTPlayerIntent.putExtra("VIDEO_NUM", index);
+//                NSTPlayerIntent.putExtra("VIDEO_TITLE", name);
+
+//                context.startActivity(NSTPlayerIntent);
             }
         }
     }

@@ -280,7 +280,7 @@ public class LiveStreamsAdapter extends RecyclerView.Adapter<LiveStreamsAdapter.
                             epgPercentage = getPercentageLeft(epgStartDateToTimestamp, epgStopDateToTimestamp);
                             if (epgPercentage != 0) {
                                 epgPercentage = 100 - epgPercentage;
-                                if (epgPercentage != 0 && !Title.equals("")) {
+                                if (epgPercentage != 0 && Title!=null && !Title.equals("")) {
                                     if (AppConst.LIVE_FLAG == 0) {
                                         holder.tvTime.setVisibility(View.VISIBLE);
 //                                        holder.tvTime.setText(programTimeFormat.format(epgStartDateToTimestamp) + " - " + programTimeFormat.format(epgStopDateToTimestamp));

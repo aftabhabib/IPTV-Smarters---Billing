@@ -355,15 +355,10 @@
     <string name="setting_etc">Configurações do jogador, Configurações parentais, etc.</string>
     <string name="stream_format">Formato de fluxo</string>
     <string name="no_information">Sem informação</string>
-
     <string name="tv_archive">ARQUIVO DE TV</string>
     <string name="epg_required_for_archive"> Para TV ARCHIVE, mantenha a EPG atualizada depende dos números de dias da loja do seu provedor </string>
     <string name="no_archive_found">Nenhum arquivo de TV encontrado</string>
     <string name="drawer_tv_archieve">Arquivo de TV</string>
-
-
-
-
     <string name="time_format">Formato de hora</string>
     <string name="milatary_time">Formato de 24 Horas</string>
     <string name="normal_time">Formato de 12 Horas</string>
@@ -371,15 +366,11 @@
     <string name="tv_guide_channel_update">Configurações da linha de tempo do EPG</string>
     <string name="channels_with_epg">Mostrar canais apenas com EPG</string>
     <string name="all_channel">Mostrar todos os canais</string>
-
-
     <string name="select_your_channel_prefrence">Preferência do Canal</string>
     <string name="select_your_stream_format">Selecione seu formato de fluxo</string>
     <string name="invalid_server_response">resposta inválida do servidor </string>
-
     <string name="no_epg_guide_found">Nenhum EPG encontrado</string>
-
     <string name="please_wait_invoice">Aguarde enquanto carregamos os resultados para você</string>
-
+    <string name="not_support">Desculpe, este vídeo não pode ser reproduzido. Tente novamente ou escolha outro vídeo.</string>
 
 </resources>

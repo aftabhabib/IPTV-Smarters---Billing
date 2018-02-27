@@ -119,7 +119,9 @@ public class AppConst {
 
 //    public static final String BASE_URL = "http://limitlessvpn.hopto.org:24625";
 
-    public static final String BASE_URL = "http://qqtv.nl";
+//    public static final String BASE_URL = "http://qqtv.nl";
+
+    public static final String BASE_URL = "http://mancaveiptv.biz:8000";
 
     //lovedeep
 //    public static final String BASE_URL = "http://premium-ott.com:8000";

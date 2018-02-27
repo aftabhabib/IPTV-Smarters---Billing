@@ -353,6 +353,6 @@ Si vous ne trouvez pas de solution à vos problèmes dans notre base de connaiss
 
     <string name="no_epg_guide_found">Aucun EPG trouvé</string>
     <string name="please_wait_invoice">Veuillez patienter pendant le chargement des résultats pour vous</string>
-
+    <string name="not_support">Désolé, cette vidéo ne peut être lue. Veuillez réessayer ou choisir une autre vidéo.</string>
 </resources>
 

@@ -196,7 +196,7 @@ public class TVArchiveAdapter extends
                             epgPercentage = getPercentageLeft(epgStartDateToTimestamp, epgStopDateToTimestamp);
                             if(epgPercentage!=0){
                                 epgPercentage = 100-epgPercentage;
-                                if(epgPercentage!=0 && !Title.equals("")) {
+                                if(epgPercentage!=0 && Title!=null && !Title.equals("")) {
                                     if (AppConst.LIVE_FLAG == 0) {
                                         holder.tvTime.setVisibility(View.VISIBLE);
                                         loginPreferencesSharedPref_time_format = context.getSharedPreferences(AppConst.LOGIN_PREF_TIME_FORMAT, MODE_PRIVATE);

@@ -368,7 +368,7 @@ public class NSTPlayerActivity extends Activity implements View.OnClickListener 
                             epgPercentage = getPercentageLeft(epgStartDateToTimestamp, epgStopDateToTimestamp);
                             if (epgPercentage != 0) {
                                 epgPercentage = 100 - epgPercentage;
-                                if (!Title.equals("")) {
+                                if (epgPercentage!=0 && Title!=null && !Title.equals("")) {
                                     hideEPGData = false;
                                     //ll_seekbar_time.setVisibility(View.VISIBLE);
 

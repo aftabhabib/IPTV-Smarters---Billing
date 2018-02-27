@@ -434,7 +434,9 @@
     <string name="giraffe_player_url_empty">Please specify the address of the video playback</string>
     <string name="small_problem">Not Played ! Try again or other</string>
     <string name="can_not_play">can not play this video</string>
-    <string name="not_support">player not support this device</string>
+    <string name="not_support">Sorry, this video can not be played. Please try again or pick another video.</string>
+
+
     <string name="version_code">Version 4.1</string>
     <string name="setting_etc">Player Settings, Parental Settings etc.</string>
     <string name="stream_format">Stream Format</string>
