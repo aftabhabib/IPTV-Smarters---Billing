@@ -371,6 +371,6 @@
     <string name="invalid_server_response">resposta inválida do servidor </string>
     <string name="no_epg_guide_found">Nenhum EPG encontrado</string>
     <string name="please_wait_invoice">Aguarde enquanto carregamos os resultados para você</string>
-    <string name="not_support">Desculpe, este vídeo não pode ser reproduzido. Tente novamente ou escolha outro vídeo.</string>
-
+    <string name="small_problem">Desculpe, este vídeo não pode ser reproduzido. Tente novamente ou escolha outro vídeo.</string>
+    <string name="not_support">o jogador não suporta este dispositivo</string>
 </resources>
