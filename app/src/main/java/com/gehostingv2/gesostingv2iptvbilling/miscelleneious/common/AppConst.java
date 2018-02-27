@@ -4,25 +4,23 @@ public class AppConst {
 
     public static final String PACKAGE_NMAE = "com.gehostingv2.gesostingv2iptvbilling";
 
-    //for ge hosting v2
-//    public static final String BASE_URL_WHMCS = "http://glsh.org.uk";
-//    public static final String SUB_FOLDERS = "/whmcs"; // /billing
+//    public static final String BASE_URL_WHMCS = "http://dev2.whmcsmodules.in";
+//    public static final String SUB_FOLDERS = ""; // /billing
 //    public static final String CART_PAGE_URL = "cart.php?";
 //    public static final String INVOICE_PAGE_URL = "viewinvoice.php";
-//    public static final String API_USERNAME = "dFzC99ppd43SxUj";
-//    public static final String API_PASSWORD = "GxIDwqoVN0Duc07";
-//    public static final String FULL_CART_PAGE_URL = "http://glsh.org.uk/whmcs/register.php";
+//    public static final String API_USERNAME = "oiur4sfYCUni8xT";
+//    public static final String API_PASSWORD = "wYmTTfC6PfsjNOA";
+//    public static final String FULL_CART_PAGE_URL = "https://dev2.whmcsmodules.in/cart.php";
 
 
-    //for production username= happ21 and password = happy21
-
-    public static final String BASE_URL_WHMCS = "https://dev2.whmcsmodules.in";
-    public static final String SUB_FOLDERS = ""; // /billing
-    public static final String CART_PAGE_URL = "cart.php?";
+    //testing details
+    public static final String BASE_URL_WHMCS = "http://ventura.whmcssmarters.com";
+    public static final String SUB_FOLDERS = "/billing";
+    public static final String CART_PAGE_URL = "billing/cart.php?";
     public static final String INVOICE_PAGE_URL = "viewinvoice.php";
-    public static final String API_USERNAME = "oiur4sfYCUni8xT";
-    public static final String API_PASSWORD = "wYmTTfC6PfsjNOA";
-    public static final String FULL_CART_PAGE_URL = "https://dev2.whmcsmodules.in/cart.php";
+    public static final String API_USERNAME = "8VFM5uPJfjf2Rgb";
+    public static final String API_PASSWORD = "hU1OVm1zuU9qgz2";
+    public static final String FULL_CART_PAGE_URL = "http://ventura.whmcssmarters.com/billing/cart.php";
 
 
 //    public static final String FIREBASE_NOTIFICATION_WEB_API_KEY = "AAAAV7cGh24:APA91bEzW0MYH7k7PfNdq8Ngkv5sxGaH1RvGh9QNuXifsLR_Od3bDRduapPcYlB09f_Rtjv9bO7f_HxZeAfgisrV1E9u10kMWwBneWPNAnH708FJyplxrTDtrMKsnutBAcvHUx15Qfic";
@@ -111,24 +109,8 @@ public class AppConst {
      * iptv constants
      */
 
-    //live hppy box
-//    public static final String BASE_URL = "http://servomaniak.top:25461";
 
-            //ge hosting v2
-//    public static final String BASE_URL = "http://cciptv.xyz:25461";
-
-//    public static final String BASE_URL = "http://limitlessvpn.hopto.org:24625";
-
-//    public static final String BASE_URL = "http://qqtv.nl";
-
-    public static final String BASE_URL = "http://mancaveiptv.biz:8000";
-
-    //lovedeep
-//    public static final String BASE_URL = "http://premium-ott.com:8000";
-            //naldo
-//    public static final String BASE_URL = "http://limitlessvpn.hopto.org:24625";
-
-//    public static final String BASE_URL = "http://premium-ott.com:8000";
+    public static final String BASE_URL = "http://iptvtugapt.site:8080";
 
     public static final String SHARED_PREFERENCE_IPTV = "sharedPreferenceIPTV";
     public static final String LOGIN_SHARED_PREFERENCE_IPTV = "loginPrefIPTV";
@@ -202,8 +184,6 @@ public class AppConst {
     public static final String LOGIN_PREF_SELECTED_EPG_SHIFT = "selectedEPGShift";
     public static final String LOGIN_PREF_TIME_FORMAT = "timeFormat";
     public static final String SKIP_BUTTON_PREF = "skip";
-
-
     public static final String LOGIN_PREF_EPG_CHANNEL_UPDATE = "epgchannelupdate";
     public static final String LOGIN_PREF_SORT = "sort";
     public static final String LOGIN_PREF_LIVE_VOD_LAYOUT = "livevodlayout";
@@ -215,15 +195,11 @@ public class AppConst {
         public static final String SHARED_PREF = "ah_firebase";
         // global topic to receive app wide push notifications
         public static final String TOPIC_GLOBAL = "global";
-
         // broadcast receiver intent filters
         public static final String REGISTRATION_COMPLETE = "registrationComplete";
         public static final String PUSH_NOTIFICATION = "pushNotification";
-
         // id to handle the notification in the notification tray
         public static final int NOTIFICATION_ID = 100;
         public static final int NOTIFICATION_ID_BIG_IMAGE = 101;
-
-
     }
 }
